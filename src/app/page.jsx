@@ -1,14 +1,8 @@
-import Navbar from "@/components/ui/Navbar"
-
-const page = () => {
+import HeaderNav from "@/components/HeaderNav";
+export default function Home() {
   return (
-    <div>
-      <Navbar/>
-      <div className="">
-        ahfgksdhf
-      </div>
-    </div>
-  )
+   <>
+      <HeaderNav />
+   </>
+  );
 }
-
-export default page

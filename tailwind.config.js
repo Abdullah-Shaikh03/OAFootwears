@@ -4,19 +4,14 @@ module.exports = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/flowbite/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
-      fontFamily: {
-        heading:['Libre Baskerville', 'serif'],
-        primary: ["Rubik", "sans-serif"],
-      },
       colors:{
-        primary:"#a0153e",
-        secondary:"#00224d"
+        'primary':'#1223f6',
+        'secondary':'#f1101a',
       }
     },
   },
-  plugins: [require("flowbite/plugin")],
+  plugins: [],
 };

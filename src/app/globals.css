@@ -1,29 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-
-/* BG animation */
-
-.css-selector {
-    background: linear-gradient(27deg, #a0153e, #00224d, #5d0e41);
-    background-size: 600% 600%;
-
-    -webkit-animation: BG 39s ease infinite;
-    animation: BG 39s ease infinite;
-}
-
-@-webkit-keyframes BG {
-    0%{background-position:0% 79%}
-    50%{background-position:100% 22%}
-    100%{background-position:0% 79%}
-}
-@keyframes BG {
-    0%{background-position:0% 79%}
-    50%{background-position:100% 22%}
-    100%{background-position:0% 79%}
-}
