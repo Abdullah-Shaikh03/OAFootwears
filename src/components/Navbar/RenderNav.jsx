@@ -29,7 +29,7 @@ const RenderNav = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [prevScrollY]);
+  });
 
   return (
     <>

@@ -28,7 +28,7 @@ const page = () => {
               </span>
             </h1>
             <p className="mx-auto mt-12 max-w-md leading-7 text-tertiary text-2xl">
-              "Step into Comfort, Walk with Style"
+              &ldquo; Step into Comfort, Walk with Style &rdquo;
             </p>
 
             <div className="group relative mt-10 inline-flex">
