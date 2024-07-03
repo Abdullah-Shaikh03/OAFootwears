@@ -10,7 +10,12 @@ module.exports = {
       colors:{
         'primary':'#1223f6',
         'secondary':'#f1101a',
-      }
+        'tertiary':'#751c93',
+      },
+      fontFamily:{
+        'heading':['Playwrite FR Moderne', 'cursive'],
+        'body':['Nunito', 'sans-serif'],
+      },
     },
   },
   plugins: [],
