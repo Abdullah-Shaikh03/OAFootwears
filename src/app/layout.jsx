@@ -1,4 +1,7 @@
 import "./globals.css";
+
+import { Analytics } from "@vercel/analytics/react"
+
 import RenderNav from "@/components/Navbar/RenderNav";
 import MainFoot from "@/components/MainFoot";
 
@@ -16,6 +19,7 @@ export default function RootLayout({ children }) {
         <RenderNav />
         {children}
         <MainFoot />
+        <Analytics />
       </body>
     </html>
   );
