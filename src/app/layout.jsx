@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`h-screen mx-auto bg-primary/5 text- font-body`}
+        className={`h-screen mx-auto bg-primary/30 font-body`}
       >
         <RenderNav />
         {children}

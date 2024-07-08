@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 const NavLinks = [
   { id: 1, name: "Home", link: "/" },
@@ -18,9 +19,10 @@ const HeaderNav = (props) => {
     setIsOpen(!isOpen);
   };
 
+  const pathname = usePathname();
 return (
     <div
-        className={`${props.className} bg-white/20 mx-20 my-10 shadow-2xl border-2 overflow-hidden ${isOpen ? 'rounded-3xl' : "rounded-full"}`}
+        className={`${props.className} ${pathname === 'dashboard' ? 'hidden' : ''} bg-white/20 mx-20 my-10 shadow-2xl border-2 overflow-hidden ${isOpen ? 'rounded-3xl' : "rounded-full"}`}
     >
         <header className="text-slate-700 container relative mx-auto flex flex-col overflow-hidden px-4 py-4 xl:flex-row xl:items-center">
             <Link
@@ -71,7 +73,7 @@ return (
                 <hr className="mt-4 w-full xl:hidden bg-primary h-1" />
                 <div className="my-4 flex justify-center items-center space-x-6 space-y-2 xl:my-0 xl:ml-auto xl:space-x-8 xl:space-y-0">
                     <Link
-                        href="/login"
+                        href="/auth/login"
                         className="whitespace-nowrap rounded-xl sm:text-xl bg-primary px-5 py-3 font-heading text-white transition-all duration-200 hover:bg-primary/20 border-2 border-primary hover:text-primary"
                     >
                         Login
