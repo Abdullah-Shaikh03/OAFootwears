@@ -1,8 +1,9 @@
 "use client";
 import Link from "next/link";
 import { TextField } from "@mui/material";
+import React from "react";
 
-const page = () => {
+const Page = () => {
   return (
     <div className="flex items-center justify-center ">
       <div className="font-f text-gray-900 sm:px-10 bg-white bg-opacity-25 shadow-2xl min-w-[90%] rounded-3xl border-2 border-primary/30">
@@ -20,40 +21,44 @@ const page = () => {
           <form className="mx-auto w-full max-w-xl px-10 py-8 md:px-8">
             <div className="mb-4">
               <TextField
-                id="standard-basic"
+                id="email"
                 label="Email"
                 variant="standard"
                 required
                 fullWidth
+                name="email"
               />
             </div>
             <div className="mb-4">
               <TextField
-                id="standard-basic"
+                id="phone"
                 label="Phone"
                 variant="standard"
                 required
                 fullWidth
+                name="phone"
               />
             </div>
             <div className="mb-4">
               <TextField
-                id="standard-basic"
+                id="storeDetails"
                 label="Store Name and Address"
                 variant="standard"
                 required
                 fullWidth
+                name="storeDetails"
               />
             </div>
             <div className="mb-4">
               <TextField
                 fullWidth
-                id="standard-multiline-static"
+                id="message"
                 label="What can we help you with?"
                 variant="standard"
                 rows={4}
                 multiline
                 required
+                name="message"
               />
             </div>
             <div className="flex items-center">
@@ -68,7 +73,7 @@ const page = () => {
           </form>
           <div className="mt-10 px-10 py-8 text-primary md:mt-0 md:ml-auto">
             <div className="">
-              <p className="mb-4 font-medium border-b  pb-2">OFFICE HOURS</p>
+              <p className="mb-4 font-medium border-b pb-2">OFFICE HOURS</p>
               <p className="mb-4">Monday – Thursday: 08:00 – 16:00</p>
               <p className="mb-4">Friday: 08:00 - 15:00</p>
               <p className="mb-4">Weekend: Closed</p>
@@ -83,8 +88,6 @@ const page = () => {
                 </Link>
               </p>
               <hr className="my-2 h-0 border-t border-r-0 border-b-0 border-l-0 border-primary" />
-              {/* <p className="mb-4">Org.no: 63452-2832</p>
-              <p className="mb-4">VAT no: 32353</p> */}
             </div>
           </div>
         </div>
@@ -93,4 +96,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

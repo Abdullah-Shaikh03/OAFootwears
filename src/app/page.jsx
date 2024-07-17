@@ -1,5 +1,8 @@
+"use client";
 import Link from "next/link";
-const page = () => {
+import React from "react";
+const Page = () => {
+
   return (
     <div className="overflow-x-hidden">
       <div className="relative py-12 sm:py-16 lg:pt-20 xl:pb-0">
@@ -7,7 +10,7 @@ const page = () => {
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="mt-5 text-3xl font-light leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:text-6xl lg:leading-tight">
               Step Up Your Style
-              <span className="relative inline-flex justify-center whitespace-nowrap font-bold font-heading text-secondary">
+              <span className="relative inline-flex justify-center whitespace-nowrap font-bold font-heading text-secondary uppercase">
                 <svg
                   className="absolute -bottom-8 hidden w-2/3 text-primary sm:block"
                   viewBox="0 0 490 42"
@@ -33,7 +36,6 @@ const page = () => {
             <div className="group relative mt-10 inline-flex">
               <Link
                 href="#"
-                title=""
                 className="border-primary rounded-xl bg-primary px-10 py-3 font-medium text-white transition-all duration-700 hover:bg-primary/20 border-2 hover:text-primary"
               >
                 Purchase Now
@@ -67,4 +69,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
