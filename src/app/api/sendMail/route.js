@@ -8,12 +8,12 @@ console.log(process.env.USER_PASS);
 
 
 const transporter = nodemailer.createTransport({
-  host: 'your_host',
-  port: 587,
-  secure: false, // true for 465, false for other ports
+  host: 'smtp.gmail.com',
+  port: process.env.PORT || 465,
+  secure: true, // true for 465, false for other ports
   auth: {
-    user: 'abdhuzyfa@gmail.com',
-    pass: 'krup kmxw ucbv vkoj',
+    user: process.env.USER_EMAIL,
+    pass: process.env.USER_PASS,
   },
 });
 
