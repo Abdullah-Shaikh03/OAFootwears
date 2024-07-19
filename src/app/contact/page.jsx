@@ -38,6 +38,7 @@ const Page = () => {
         });
       } else {
         alert('Error sending email');
+        console.error('Error sending email:', response.statusText);
       }
     } catch (error) {
       console.error('Error sending email:', error);

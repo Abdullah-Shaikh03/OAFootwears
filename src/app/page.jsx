@@ -1,12 +1,27 @@
 "use client";
 import Link from "next/link";
 import React from "react";
-const Page = () => {
 
+import Modal from "@/components/Modal/Modal";
+
+const Page = () => {
+  const [isOpen, setIsOpen] = React.useState(false);
+  const openModal = () => setIsOpen(true);
+  const closeModal = () => setIsOpen(false);
+
+  React.useEffect(() => {
+    if (isOpen) {
+      const timer = setTimeout(() => {
+        openModal();
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, []);
   return (
     <div className="overflow-x-hidden">
       <div className="relative py-12 sm:py-16 lg:pt-20 xl:pb-0">
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Modal isOpen={isOpen} onClose={closeModal} />
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="mt-5 text-3xl font-light leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:text-6xl lg:leading-tight">
               Step Up Your Style

@@ -1,27 +1,28 @@
 import nodemailer from 'nodemailer';
 import dotenv from 'dotenv';
+import { NextResponse } from 'next/server';
 
 dotenv.config();
 
-
 const transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
-  port: process.env.PORT || 465,
+  port: 465,
   secure: true, // true for 465, false for other ports
   auth: {
-    user: process.env.USER_EMAIL,
-    pass: process.env.USER_PASS,
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
   },
 });
 
-export default async function handler(req, res) {
-  if (req.method === 'POST') {
-    const { email, phone, storeDetails, message } = req.body;
+export async function POST(req) {
+  try {
+    const { email, phone, storeDetails, message } = await req.json();
+
 
     const mailOptions = {
-      from: process.env.USER_EMAIL,
+      from: process.env.EMAIL_USER,
       to: 'abd971153@gmail.com',
-      subject: 'Contact Form Submission',
+      subject: 'Enquiry from O&A Footwears',
       text: `
         Email: ${email}
         Phone: ${phone}
@@ -30,15 +31,16 @@ export default async function handler(req, res) {
       `,
     };
 
-    try {
-      const result = await transporter.sendMail(mailOptions);
-      console.log('Email sent:', result);
-      res.status(200).json({ message: 'Email sent successfully' });
-    } catch (error) {
-      console.error('Error sending email:', error);
-      res.status(500).json({ message: 'Error sending email', error });
-    }
-  } else {
-    res.status(405).json({ message: 'Method not allowed' });
+    const result = await transporter.sendMail(mailOptions);
+    // console.log('Email sent:', result);
+
+    return NextResponse.json({ message: 'Email sent successfully' });
+  } catch (error) {
+    console.error('Error sending email:', error);
+    return NextResponse.json({ message: 'Error sending email', error }, { status: 500 });
   }
+}
+
+export function GET() {
+  return NextResponse.json({ message: 'Method not allowed' }, { status: 405 });
 }
