@@ -4,8 +4,49 @@ import { TextField } from "@mui/material";
 import React from "react";
 
 const Page = () => {
+  const [formData, setFormData] = React.useState({
+    email: "",
+    phone: "",
+    storeDetails: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch('/api/sendMail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        alert('Email sent successfully');
+        setFormData({
+          email: "",
+          phone: "",
+          storeDetails: "",
+          message: "",
+        });
+      } else {
+        alert('Error sending email');
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+      alert('Error sending email');
+    }
+  };
+
   return (
-    <div className="flex items-center justify-center ">
+    <div className="flex items-center justify-center mb-12">
       <div className="font-f text-gray-900 sm:px-10 bg-white bg-opacity-25 shadow-2xl min-w-[90%] rounded-3xl border-2 border-primary/30">
         <div className="text-gray-900">
           <div className="mx-auto w-full sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl">
@@ -13,12 +54,11 @@ const Page = () => {
               <h1 className="mb-4 text-3xl font-black sm:text-5xl xl:text-6xl font-heading">
                 Contact us
               </h1>
-              <div className="text-lg sm:text-xl xl:text-xl"></div>
             </div>
           </div>
         </div>
         <div className="mx-auto mb-20 flex w-full max-w-screen-lg flex-col overflow-hidden rounded-xl text-gray-900 md:flex-row">
-          <form className="mx-auto w-full max-w-xl px-10 py-8 md:px-8">
+          <form className="mx-auto w-full max-w-xl px-10 py-8 md:px-8" onSubmit={handleSubmit}>
             <div className="mb-4">
               <TextField
                 id="email"
@@ -27,6 +67,8 @@ const Page = () => {
                 required
                 fullWidth
                 name="email"
+                value={formData.email}
+                onChange={handleChange}
               />
             </div>
             <div className="mb-4">
@@ -37,6 +79,8 @@ const Page = () => {
                 required
                 fullWidth
                 name="phone"
+                value={formData.phone}
+                onChange={handleChange}
               />
             </div>
             <div className="mb-4">
@@ -47,6 +91,8 @@ const Page = () => {
                 required
                 fullWidth
                 name="storeDetails"
+                value={formData.storeDetails}
+                onChange={handleChange}
               />
             </div>
             <div className="mb-4">
@@ -59,10 +105,11 @@ const Page = () => {
                 multiline
                 required
                 name="message"
+                value={formData.message}
+                onChange={handleChange}
               />
             </div>
             <div className="flex items-center">
-              <div className="flex-1 sm:flex sm:items-center sm:justify-center"></div>
               <button
                 className="rounded-xl bg-primary border-primary border-2 px-4 py-3 text-center font-bold text-white hover:bg-primary/30 hover:text-primary"
                 type="submit"

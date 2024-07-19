@@ -13,3 +13,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+html {
+    scrollbar-width: normal;
+    scrollbar-color: rgba(18, 35, 246, 0.4) rgba(18, 35, 246, 0.1);
+    scrollbar-arrow-color: #1223f6;
+}

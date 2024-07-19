@@ -1,32 +1,28 @@
-import Link from "next/link";
+"use client";
+import React from "react";
+import { usePathname } from "next/navigation";
+import NavLinks from "./Navbar/NavLinks";
 
 const MainFoot = () => {
-    const currentYear = new Date().getFullYear();
-
-    return (
-        <footer className="my-10 bottom-0 bg-primary/60 px-4 pt-6">
-            <nav
-                aria-label="Footer Navigation"
-                className="mx-auto mb-10 flex items-center justify-center max-w-full flex-col gap-5 text-center sm:flex-row sm:text-left"
-            >
-                <Link href="#" className="font-medium text-white">
-                    Demo
-                </Link>
-                <Link href="#" className="font-medium text-white">
-                    Support
-                </Link>
-                <Link href="#" className="font-medium text-white">
-                    Privacy Policy
-                </Link>
-                <Link href="#" className="font-medium text-white">
-                    Terms & Conditions
-                </Link>
-            </nav>
-            <p className="py-10 text-center text-white">
-                © {currentYear} | All Rights Reserved
-            </p>
-        </footer>
-    );
+  const pathname = usePathname();
+  return (
+    <footer
+      className={`mt-auto w-screen bg-primary/25 flex md:flex-row  flex-col gap-5 ${
+        pathname === "/dashboard" ? "hidden" : ""
+      }`}
+    >
+      <section className="relative">
+        <h1 className="font-heading text-4xl mx-2 lg:px-28 lg:py-14 sm:px-14 pt-7 font-bold">
+          O & A Footwears
+        </h1>
+      </section>
+      <section className="flex-2/3 flex lg:ms-auto mx-10 font-bold text-xl mt-4">
+        <ul className="sm:flex mt-10">
+          <NavLinks />
+        </ul>
+      </section>
+    </footer>
+  );
 };
 
 export default MainFoot;

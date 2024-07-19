@@ -1,8 +1,7 @@
 import "./globals.css";
 
 import { Analytics } from "@vercel/analytics/react"
-
-import RenderNav from "@/components/Navbar/RenderNav";
+import HeaderNav from "@/components/Navbar/HeaderNav";
 import MainFoot from "@/components/MainFoot";
 
 export const metadata = {
@@ -14,9 +13,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`h-screen mx-auto bg-primary/30 font-body`}
+        className={`min-h-screen flex bg-primary/30 flex-col font-body overflow-x-hidden`}
       >
-        <RenderNav />
+        <HeaderNav />
         {children}
         <MainFoot />
         <Analytics />

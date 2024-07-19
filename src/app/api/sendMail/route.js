@@ -1,34 +1,47 @@
-// src/app/api/contact.js
-
 import nodemailer from 'nodemailer';
+import dotenv from 'dotenv';
 
-export async function POST(req, res) {
-  const { email, phone, storeDetails, message } = await req.json();
+dotenv.config();
 
-  if (!email || !phone || !storeDetails || !message) {
-    return res.status(400).json({ error: 'All fields are required' });
-  }
+console.log(process.env.USER_EMAIL);
+console.log(process.env.USER_PASS);
 
-  const transporter = nodemailer.createTransport({
-    service: 'Gmail', // or your preferred email service
-    auth: {
-      user: process.env.USER_EMAIL,
-      pass: process.env.USER_PASS,
-    },
-  });
 
-  const mailOptions = {
-    from: process.env.USER_EMAIL,
-    to: process.env.USER_EMAIL, // or any email where you want to receive the contact form details
-    subject: 'New Contact Form Submission',
-    text: `Email: ${email}\nPhone: ${phone}\nStore Details: ${storeDetails}\nMessage: ${message}`,
-  };
+const transporter = nodemailer.createTransport({
+  host: 'your_host',
+  port: 587,
+  secure: false, // true for 465, false for other ports
+  auth: {
+    user: 'abdhuzyfa@gmail.com',
+    pass: 'krup kmxw ucbv vkoj',
+  },
+});
 
-  try {
-    await transporter.sendMail(mailOptions);
-    return res.status(200).json({ message: 'Email sent successfully' });
-  } catch (error) {
-    console.error(error);
-    return res.status(500).json({ error: 'Failed to send email' });
+export default async function handler(req, res) {
+  if (req.method === 'POST') {
+    const { email, phone, storeDetails, message } = req.body;
+
+    const mailOptions = {
+      from: process.env.USER_EMAIL,
+      to: 'abd971153@gmail.com',
+      subject: 'Contact Form Submission',
+      text: `
+        Email: ${email}
+        Phone: ${phone}
+        Store Details: ${storeDetails}
+        Message: ${message}
+      `,
+    };
+
+    try {
+      const result = await transporter.sendMail(mailOptions);
+      console.log('Email sent:', result);
+      res.status(200).json({ message: 'Email sent successfully' });
+    } catch (error) {
+      console.error('Error sending email:', error);
+      res.status(500).json({ message: 'Error sending email', error });
+    }
+  } else {
+    res.status(405).json({ message: 'Method not allowed' });
   }
 }
