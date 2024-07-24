@@ -3,7 +3,6 @@ import bcryptjs from "bcryptjs";
 import dotenv from "dotenv";
 import userModel from "@/models/userModel";
 import { NextRequest, NextResponse } from "next/server";
-import { useRouter } from "next/navigation";
 
 dotenv.config();
 
