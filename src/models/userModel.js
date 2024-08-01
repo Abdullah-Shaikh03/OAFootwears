@@ -1,13 +1,6 @@
 import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema({
-  phone: {
-    type: String,
-    required: [true, "Phone number is required"],
-    min: 10,
-    max: 10,
-    unique: true,
-  },
   email: {
     type: String,
     required: [true, "Email is required"],
@@ -22,13 +15,27 @@ const userSchema = new mongoose.Schema({
     min: 8,
     max: 1024,
   },
+  phone: {
+    type: String,
+    required: [true, "Phone number is required"],
+    min: 10,
+    max: 10,
+    unique: true,
+  },
   date: {
     type: Date,
     default: Date.now,
   },
-  isAdmin: {
-    type: Boolean,
-    default: false,
+  storeDetails:{
+    type: String,
+    required: [true, "Store details is required"],
+    min: 10,
+    max: 1024,
+  },
+  roles:{
+    type: Array,
+    default: ["user"],
+
   },
 });
 

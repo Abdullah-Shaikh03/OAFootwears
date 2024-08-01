@@ -3,7 +3,7 @@ const nextConfig = {
     images:{
         remotePatterns:[
             {
-                hostname:'images.unsplash.com',
+                hostname:'s3://oafootwearimgs/',
             }
         ]
     }
