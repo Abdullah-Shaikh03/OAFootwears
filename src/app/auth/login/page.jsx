@@ -95,6 +95,7 @@ export default function SignIn() {
                   fullWidth
                   variant="contained"
                   sx={{ mt: 3, mb: 2 }}
+                  onSubmit={handleSubmit}
                 >
                   Sign In
                 </Button>

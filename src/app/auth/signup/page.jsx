@@ -12,8 +12,6 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-
-
 function Copyright(props) {
   return (
     <Typography
@@ -37,17 +35,45 @@ function Copyright(props) {
 const defaultTheme = createTheme();
 
 export default function SignIn() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
+  const [values, setValues] = React.useState({
+    email: "",
+    password: "",
+    Phone: "",
+    storeDetails: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setValues({
+      ...values,
+      [name]: value,
     });
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch("/api/auth/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+      if (response.ok) {
+        const data = await response.json();
+        if (data.error) {
+          return alert(data.error);
+        }
+        alert("User Registered Successfully return to login page");
+        router.push("/auth/login");
+      }
+    } catch (error) {
+      alert("Error sending email");
+    }
+  };
   return (
-    <div className="flex item-center justify-center">
+    <div className="flex item-center justify-center mb-10">
       <div className="shadow-2xl w-[60%] rounded-2xl border-white bg-white/35">
         <ThemeProvider theme={defaultTheme}>
           <Container component="main" maxWidth="xs">
@@ -66,12 +92,7 @@ export default function SignIn() {
               <Typography component="h1" variant="h5">
                 Sign in
               </Typography>
-              <Box
-                component="form"
-                onSubmit={handleSubmit}
-                noValidate
-                sx={{ mt: 1 }}
-              >
+              <Box component="form" noValidate sx={{ mt: 1 }}>
                 <TextField
                   margin="normal"
                   required
@@ -81,16 +102,18 @@ export default function SignIn() {
                   name="email"
                   autoComplete="email"
                   autoFocus
+                  onChange={handleChange}
                 />
                 <TextField
-                    margin="normal"
-                    required
-                    fullWidth
-                    id="Name"
-                    label="Name"
-                    name="Name"
-                    autoComplete="Name"
-                    autoFocus
+                  margin="normal"
+                  required
+                  fullWidth
+                  id="Phone"
+                  label="Phone"
+                  name="Phone"
+                  autoComplete="Name"
+                  autoFocus
+                  onChange={handleChange}
                 />
                 <TextField
                   margin="normal"
@@ -101,22 +124,24 @@ export default function SignIn() {
                   type="password"
                   id="password"
                   autoComplete="current-password"
+                  onChange={handleChange}
                 />
                 <TextField
                   margin="normal"
-                  required
                   fullWidth
-                  name="password"
-                  label="Re-type Password"
-                  type="password"
+                  name="storeDetails"
+                  label="Store Name and Address"
+                  type="address"
                   id="password"
                   autoComplete="current-password"
+                  onChange={handleChange}
                 />
                 <Button
                   type="submit"
                   fullWidth
                   variant="contained"
                   sx={{ mt: 3, mb: 2 }}
+                  onSubmit={handleSubmit}
                 >
                   Sign In
                 </Button>
