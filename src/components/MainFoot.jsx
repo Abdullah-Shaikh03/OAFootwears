@@ -7,9 +7,7 @@ const MainFoot = () => {
   const pathname = usePathname();
   return (
     <footer
-      className={`mt-auto w-screen bg-primary/25 flex md:flex-row  flex-col gap-5 ${
-        pathname === "/dashboard" ? "hidden" : ""
-      }`}
+      className={`mt-auto w-screen bg-primary/25 flex md:flex-row  flex-col gap-5`}
     >
       <section className="relative">
         <h1 className="font-heading text-4xl mx-2 lg:px-28 lg:py-14 sm:px-14 pt-7 font-bold">

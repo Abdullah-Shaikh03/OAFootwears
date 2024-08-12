@@ -4,41 +4,44 @@ const userSchema = new mongoose.Schema({
   email: {
     type: String,
     required: [true, "Email is required"],
-    min: 6,
-    max: 255,
+    minlength: 6,
+    maxlength: 255,
     unique: true,
-    primary: true,
   },
   password: {
     type: String,
     required: [true, "Password is required"],
-    min: 8,
-    max: 1024,
+    minlength: 8,
+    maxlength: 1024,
   },
   phone: {
     type: String,
     required: [true, "Phone number is required"],
-    min: 10,
-    max: 10,
+    minlength: 10,
+    maxlength: 10,
     unique: true,
   },
   date: {
     type: Date,
     default: Date.now,
   },
-  storeDetails:{
+  storeDetails: {
     type: String,
-    required: [true, "Store details is required"],
-    min: 10,
-    max: 1024,
+    required: [true, "Store details are required"],
+    minlength: 10,
+    maxlength: 1024,
   },
-  roles:{
-    type: Array,
+  jwtToken: {
+    type: String,
+    required: true
+  },
+  roles: {
+    type: [String],
+    enum: ["user", "admin", "salesRep", "storeOwner"],
     default: ["user"],
-
   },
 });
 
-const userModel = mongoose.model("User", userSchema) || mongoose.models.User;
+const User = mongoose.models.User || mongoose.model("User", userSchema);
 
-export default userModel;
+export default User;
