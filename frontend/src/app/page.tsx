@@ -11,12 +11,6 @@ const Page = () => {
     {
       text: "To",
     },
-    // {
-    //   text: "",
-    // },
-    // {
-    //   text: "with",
-    // },
     {
       text: "O&A Footwears.",
       className: "text-blue-500 dark:text-blue-500",
@@ -37,9 +31,9 @@ const Page = () => {
         >
           Explore Collections
         </Link>
-        {/* <button className="w-40 h-10 rounded-xl bg-white text-black border border-black  text-sm">
-          Signup
-        </button> */}
+      </div>
+      <div className="mt-10">
+        BEnto grid
       </div>
     </div>
   );
