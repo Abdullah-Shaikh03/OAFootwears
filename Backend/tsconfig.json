@@ -1,18 +1,28 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "module": "commonjs",
-    "outDir": "./dist",
-    "rootDir": ".",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
+    "target": "es2019", // Aligns with modern JavaScript versions
+    "module": "commonjs", // Keep CommonJS for Node.js compatibility
+    "outDir": "./dist", 
+    "rootDir": ".", 
+    "strict": true, 
+    "esModuleInterop": true, 
+    "skipLibCheck": true, 
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "sourceMap": true,
+    "moduleResolution": "node", 
+    "resolveJsonModule": true, 
+    "sourceMap": true, 
     "declaration": true
   },
-  "include": ["index.ts", "src/**/*"],
-  "exclude": ["node_modules", "**/*.spec.ts"]
+  "include": [
+    "index.ts", 
+    "src/**/*", 
+    "tests/**/*.ts" // Add your test files here if needed
+  ],
+  "exclude": [
+    "node_modules", 
+    "dist", 
+    "**/*.spec.ts", 
+    "**/*.test.ts", // Exclude Jest tests if not required during build
+    "**/__mocks__/**" // Ignore mocks if any
+  ]
 }

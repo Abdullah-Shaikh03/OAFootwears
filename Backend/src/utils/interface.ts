@@ -1,31 +1,13 @@
 import { Document } from "mongoose";
-import mongoose from "mongoose";
 
 export interface IUser extends Document {
   email: string;
-  password?: string;
+  password: string;
   name: string;
   googleId?: string;
   otp?: string;
   otpExpiresAt?: Date;
   role: "admin" | "store_manager" | "user";
-}
-
-export interface IInventory extends Document {
-  product: mongoose.Types.ObjectId;
-  quantity: number;
-  store: mongoose.Types.ObjectId;
-}
-
-export interface IOrder extends Document {
-  user: mongoose.Types.ObjectId;
-  products: Array<{
-    product: mongoose.Types.ObjectId;
-    quantity: number;
-  }>;
-  totalAmount: number;
-  status: string;
-  paymentStatus: string;
 }
 
 export interface IProduct extends Document {
@@ -36,10 +18,28 @@ export interface IProduct extends Document {
   brand: string;
   sku: string;
   inStock: number;
+  imageUrls: string[];
 }
 
 export interface IStore extends Document {
   name: string;
   address: string;
-  manager: mongoose.Types.ObjectId;
+  manager: IUser["_id"];
+}
+
+export interface IInventory extends Document {
+  product: IProduct["_id"];
+  quantity: number;
+  store: IStore["_id"];
+}
+
+export interface IOrder extends Document {
+  user: IUser["_id"];
+  products: Array<{
+    product: IProduct["_id"];
+    quantity: number;
+  }>;
+  totalAmount: number;
+  status: string;
+  paymentStatus: string;
 }

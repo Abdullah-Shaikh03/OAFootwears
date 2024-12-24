@@ -1,0 +1,985 @@
+
+    Details:
+
+    /media/abdullahsk03/Abdullah/OAFootwears/Backend/dist/src/__tests__/order.test.d.ts:1
+    ({"Object.<anonymous>":function(module,exports,require,__dirname,__filename,jest){export {};
+                                                                                      ^^^^^^
+
+    SyntaxError: Unexpected token 'export'
+
+      at Runtime.createScriptFromCode (node_modules/jest-runtime/build/index.js:1505:14)
+
+ FAIL  dist/src/__tests__/inventory.test.d.ts
+  ● Test suite failed to run
+
+    Jest encountered an unexpected token
+
+    Jest failed to parse a file. This happens e.g. when your code or its dependencies use non-standard JavaScript syntax, or when Jest is not configured to support such syntax.
+
+    Out of the box Jest supports Babel, which will be used to transform your files into valid JS based on your Babel configuration.
+
+    By default "node_modules" folder is ignored by transformers.
+
+    Here's what you can do:
+     • If you are trying to use ECMAScript Modules, see https://jestjs.io/docs/ecmascript-modules for how to enable it.
+     • If you are trying to use TypeScript, see https://jestjs.io/docs/getting-started#using-typescript
+     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
+     • If you need a custom transformation specify a "transform" option in your config.
+     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
+
+    You'll find more details and examples of these config options in the docs:
+    https://jestjs.io/docs/configuration
+    For information about custom transformations, see:
+    https://jestjs.io/docs/code-transformation
+
+    Details:
+
+    /media/abdullahsk03/Abdullah/OAFootwears/Backend/dist/src/__tests__/inventory.test.d.ts:1
+    ({"Object.<anonymous>":function(module,exports,require,__dirname,__filename,jest){export {};
+                                                                                      ^^^^^^
+
+    SyntaxError: Unexpected token 'export'
+
+      at Runtime.createScriptFromCode (node_modules/jest-runtime/build/index.js:1505:14)
+
+ FAIL  dist/src/__tests__/document.test.d.ts
+  ● Test suite failed to run
+
+    Jest encountered an unexpected token
+
+    Jest failed to parse a file. This happens e.g. when your code or its dependencies use non-standard JavaScript syntax, or when Jest is not configured to support such syntax.
+
+    Out of the box Jest supports Babel, which will be used to transform your files into valid JS based on your Babel configuration.
+
+    By default "node_modules" folder is ignored by transformers.
+
+    Here's what you can do:
+     • If you are trying to use ECMAScript Modules, see https://jestjs.io/docs/ecmascript-modules for how to enable it.
+     • If you are trying to use TypeScript, see https://jestjs.io/docs/getting-started#using-typescript
+     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
+     • If you need a custom transformation specify a "transform" option in your config.
+     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
+
+    You'll find more details and examples of these config options in the docs:
+    https://jestjs.io/docs/configuration
+    For information about custom transformations, see:
+    https://jestjs.io/docs/code-transformation
+
+    Details:
+
+    /media/abdullahsk03/Abdullah/OAFootwears/Backend/dist/src/__tests__/document.test.d.ts:1
+    ({"Object.<anonymous>":function(module,exports,require,__dirname,__filename,jest){export {};
+                                                                                      ^^^^^^
+
+    SyntaxError: Unexpected token 'export'
+
+      at Runtime.createScriptFromCode (node_modules/jest-runtime/build/index.js:1505:14)
+
+ FAIL  dist/src/__tests__/auth.test.d.ts
+  ● Test suite failed to run
+
+    Jest encountered an unexpected token
+
+    Jest failed to parse a file. This happens e.g. when your code or its dependencies use non-standard JavaScript syntax, or when Jest is not configured to support such syntax.
+
+    Out of the box Jest supports Babel, which will be used to transform your files into valid JS based on your Babel configuration.
+
+    By default "node_modules" folder is ignored by transformers.
+
+    Here's what you can do:
+     • If you are trying to use ECMAScript Modules, see https://jestjs.io/docs/ecmascript-modules for how to enable it.
+     • If you are trying to use TypeScript, see https://jestjs.io/docs/getting-started#using-typescript
+     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
+     • If you need a custom transformation specify a "transform" option in your config.
+     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
+
+    You'll find more details and examples of these config options in the docs:
+    https://jestjs.io/docs/configuration
+    For information about custom transformations, see:
+    https://jestjs.io/docs/code-transformation
+
+    Details:
+
+    /media/abdullahsk03/Abdullah/OAFootwears/Backend/dist/src/__tests__/auth.test.d.ts:1
+    ({"Object.<anonymous>":function(module,exports,require,__dirname,__filename,jest){export {};
+                                                                                      ^^^^^^
+
+    SyntaxError: Unexpected token 'export'
+
+      at Runtime.createScriptFromCode (node_modules/jest-runtime/build/index.js:1505:14)
+
+ FAIL  src/__tests__/store.test.ts
+  ● Test suite failed to run
+
+    Jest encountered an unexpected token
+
+    Jest failed to parse a file. This happens e.g. when your code or its dependencies use non-standard JavaScript syntax, or when Jest is not configured to support such syntax.
+
+    Out of the box Jest supports Babel, which will be used to transform your files into valid JS based on your Babel configuration.
+
+    By default "node_modules" folder is ignored by transformers.
+
+    Here's what you can do:
+     • If you are trying to use ECMAScript Modules, see https://jestjs.io/docs/ecmascript-modules for how to enable it.
+     • If you are trying to use TypeScript, see https://jestjs.io/docs/getting-started#using-typescript
+     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
+     • If you need a custom transformation specify a "transform" option in your config.
+     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
+
+    You'll find more details and examples of these config options in the docs:
+    https://jestjs.io/docs/configuration
+    For information about custom transformations, see:
+    https://jestjs.io/docs/code-transformation
+
+    Details:
+
+    SyntaxError: /media/abdullahsk03/Abdullah/OAFootwears/Backend/src/__tests__/store.test.ts: Missing semicolon. (9:15)
+
+       7 | import { IUser } from '../utils/interface';
+       8 |
+    >  9 | let mongoServer: MongoMemoryServer;
+         |                ^
+      10 |
+      11 | beforeAll(async () => {
+      12 |   mongoServer = await MongoMemoryServer.create();
+
+      at constructor (node_modules/@babel/parser/src/parse-error.ts:95:45)
+      at Parser.toParseError [as raise] (node_modules/@babel/parser/src/tokenizer/index.ts:1496:19)
+      at Parser.raise [as semicolon] (node_modules/@babel/parser/src/parser/util.ts:149:10)
+      at Parser.semicolon [as parseVarStatement] (node_modules/@babel/parser/src/parser/statement.ts:1215:10)
+      at Parser.parseVarStatement [as parseStatementContent] (node_modules/@babel/parser/src/parser/statement.ts:566:21)
+      at Parser.parseStatementContent [as parseStatementLike] (node_modules/@babel/parser/src/parser/statement.ts:437:17)
+      at Parser.parseStatementLike [as parseModuleItem] (node_modules/@babel/parser/src/parser/statement.ts:374:17)
+      at Parser.parseModuleItem [as parseBlockOrModuleBlockBody] (node_modules/@babel/parser/src/parser/statement.ts:1406:16)
+      at Parser.parseBlockOrModuleBlockBody [as parseBlockBody] (node_modules/@babel/parser/src/parser/statement.ts:1380:10)
+      at Parser.parseBlockBody [as parseProgram] (node_modules/@babel/parser/src/parser/statement.ts:225:10)
+      at Parser.parseProgram [as parseTopLevel] (node_modules/@babel/parser/src/parser/statement.ts:203:25)
+      at Parser.parseTopLevel [as parse] (node_modules/@babel/parser/src/parser/index.ts:47:10)
+      at parse (node_modules/@babel/parser/src/index.ts:66:38)
+      at parser (node_modules/@babel/core/src/parser/index.ts:28:19)
+          at parser.next (<anonymous>)
+      at normalizeFile (node_modules/@babel/core/src/transformation/normalize-file.ts:50:24)
+          at normalizeFile.next (<anonymous>)
+      at run (node_modules/@babel/core/src/transformation/index.ts:40:36)
+          at run.next (<anonymous>)
+      at transform (node_modules/@babel/core/src/transform.ts:29:20)
+          at transform.next (<anonymous>)
+      at evaluateSync (node_modules/gensync/index.js:251:28)
+      at sync (node_modules/gensync/index.js:89:14)
+      at fn (node_modules/@babel/core/src/errors/rewrite-stack-trace.ts:99:14)
+      at transformSync (node_modules/@babel/core/src/transform.ts:66:52)
+      at ScriptTransformer.transformSource (node_modules/@jest/transform/build/ScriptTransformer.js:545:31)
+      at ScriptTransformer._transformAndBuildScript (node_modules/@jest/transform/build/ScriptTransformer.js:674:40)
+      at ScriptTransformer.transform (node_modules/@jest/transform/build/ScriptTransformer.js:726:19)
+
+ FAIL  src/__tests__/product.test.ts
+  ● Test suite failed to run
+
+    Jest encountered an unexpected token
+
+    Jest failed to parse a file. This happens e.g. when your code or its dependencies use non-standard JavaScript syntax, or when Jest is not configured to support such syntax.
+
+    Out of the box Jest supports Babel, which will be used to transform your files into valid JS based on your Babel configuration.
+
+    By default "node_modules" folder is ignored by transformers.
+
+    Here's what you can do:
+     • If you are trying to use ECMAScript Modules, see https://jestjs.io/docs/ecmascript-modules for how to enable it.
+     • If you are trying to use TypeScript, see https://jestjs.io/docs/getting-started#using-typescript
+     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
+     • If you need a custom transformation specify a "transform" option in your config.
+     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
+
+    You'll find more details and examples of these config options in the docs:
+    https://jestjs.io/docs/configuration
+    For information about custom transformations, see:
+    https://jestjs.io/docs/code-transformation
+
+    Details:
+
+    SyntaxError: /media/abdullahsk03/Abdullah/OAFootwears/Backend/src/__tests__/product.test.ts: Missing semicolon. (7:15)
+
+       5 | import Product from '../models/Product';
+       6 |
+    >  7 | let mongoServer: MongoMemoryServer;
+         |                ^
+       8 |
+       9 | beforeAll(async () => {
+      10 |   mongoServer = await MongoMemoryServer.create();
+
+      at constructor (node_modules/@babel/parser/src/parse-error.ts:95:45)
+      at Parser.toParseError [as raise] (node_modules/@babel/parser/src/tokenizer/index.ts:1496:19)
+      at Parser.raise [as semicolon] (node_modules/@babel/parser/src/parser/util.ts:149:10)
+      at Parser.semicolon [as parseVarStatement] (node_modules/@babel/parser/src/parser/statement.ts:1215:10)
+      at Parser.parseVarStatement [as parseStatementContent] (node_modules/@babel/parser/src/parser/statement.ts:566:21)
+      at Parser.parseStatementContent [as parseStatementLike] (node_modules/@babel/parser/src/parser/statement.ts:437:17)
+      at Parser.parseStatementLike [as parseModuleItem] (node_modules/@babel/parser/src/parser/statement.ts:374:17)
+      at Parser.parseModuleItem [as parseBlockOrModuleBlockBody] (node_modules/@babel/parser/src/parser/statement.ts:1406:16)
+      at Parser.parseBlockOrModuleBlockBody [as parseBlockBody] (node_modules/@babel/parser/src/parser/statement.ts:1380:10)
+      at Parser.parseBlockBody [as parseProgram] (node_modules/@babel/parser/src/parser/statement.ts:225:10)
+      at Parser.parseProgram [as parseTopLevel] (node_modules/@babel/parser/src/parser/statement.ts:203:25)
+      at Parser.parseTopLevel [as parse] (node_modules/@babel/parser/src/parser/index.ts:47:10)
+      at parse (node_modules/@babel/parser/src/index.ts:66:38)
+      at parser (node_modules/@babel/core/src/parser/index.ts:28:19)
+          at parser.next (<anonymous>)
+      at normalizeFile (node_modules/@babel/core/src/transformation/normalize-file.ts:50:24)
+          at normalizeFile.next (<anonymous>)
+      at run (node_modules/@babel/core/src/transformation/index.ts:40:36)
+          at run.next (<anonymous>)
+      at transform (node_modules/@babel/core/src/transform.ts:29:20)
+          at transform.next (<anonymous>)
+      at evaluateSync (node_modules/gensync/index.js:251:28)
+      at sync (node_modules/gensync/index.js:89:14)
+      at fn (node_modules/@babel/core/src/errors/rewrite-stack-trace.ts:99:14)
+      at transformSync (node_modules/@babel/core/src/transform.ts:66:52)
+      at ScriptTransformer.transformSource (node_modules/@jest/transform/build/ScriptTransformer.js:545:31)
+      at ScriptTransformer._transformAndBuildScript (node_modules/@jest/transform/build/ScriptTransformer.js:674:40)
+      at ScriptTransformer.transform (node_modules/@jest/transform/build/ScriptTransformer.js:726:19)
+
+ FAIL  src/__tests__/order.test.ts
+  ● Test suite failed to run
+
+    Jest encountered an unexpected token
+
+    Jest failed to parse a file. This happens e.g. when your code or its dependencies use non-standard JavaScript syntax, or when Jest is not configured to support such syntax.
+
+    Out of the box Jest supports Babel, which will be used to transform your files into valid JS based on your Babel configuration.
+
+    By default "node_modules" folder is ignored by transformers.
+
+    Here's what you can do:
+     • If you are trying to use ECMAScript Modules, see https://jestjs.io/docs/ecmascript-modules for how to enable it.
+     • If you are trying to use TypeScript, see https://jestjs.io/docs/getting-started#using-typescript
+     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
+     • If you need a custom transformation specify a "transform" option in your config.
+     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
+
+    You'll find more details and examples of these config options in the docs:
+    https://jestjs.io/docs/configuration
+    For information about custom transformations, see:
+    https://jestjs.io/docs/code-transformation
+
+    Details:
+
+    SyntaxError: /media/abdullahsk03/Abdullah/OAFootwears/Backend/src/__tests__/order.test.ts: Missing semicolon. (10:15)
+
+       8 | import { IProduct, IUser } from '../utils/interface';
+       9 |
+    > 10 | let mongoServer: MongoMemoryServer;
+         |                ^
+      11 |
+      12 | beforeAll(async () => {
+      13 |   mongoServer = await MongoMemoryServer.create();
+
+      at constructor (node_modules/@babel/parser/src/parse-error.ts:95:45)
+      at Parser.toParseError [as raise] (node_modules/@babel/parser/src/tokenizer/index.ts:1496:19)
+      at Parser.raise [as semicolon] (node_modules/@babel/parser/src/parser/util.ts:149:10)
+      at Parser.semicolon [as parseVarStatement] (node_modules/@babel/parser/src/parser/statement.ts:1215:10)
+      at Parser.parseVarStatement [as parseStatementContent] (node_modules/@babel/parser/src/parser/statement.ts:566:21)
+      at Parser.parseStatementContent [as parseStatementLike] (node_modules/@babel/parser/src/parser/statement.ts:437:17)
+      at Parser.parseStatementLike [as parseModuleItem] (node_modules/@babel/parser/src/parser/statement.ts:374:17)
+      at Parser.parseModuleItem [as parseBlockOrModuleBlockBody] (node_modules/@babel/parser/src/parser/statement.ts:1406:16)
+      at Parser.parseBlockOrModuleBlockBody [as parseBlockBody] (node_modules/@babel/parser/src/parser/statement.ts:1380:10)
+      at Parser.parseBlockBody [as parseProgram] (node_modules/@babel/parser/src/parser/statement.ts:225:10)
+      at Parser.parseProgram [as parseTopLevel] (node_modules/@babel/parser/src/parser/statement.ts:203:25)
+      at Parser.parseTopLevel [as parse] (node_modules/@babel/parser/src/parser/index.ts:47:10)
+      at parse (node_modules/@babel/parser/src/index.ts:66:38)
+      at parser (node_modules/@babel/core/src/parser/index.ts:28:19)
+          at parser.next (<anonymous>)
+      at normalizeFile (node_modules/@babel/core/src/transformation/normalize-file.ts:50:24)
+          at normalizeFile.next (<anonymous>)
+      at run (node_modules/@babel/core/src/transformation/index.ts:40:36)
+          at run.next (<anonymous>)
+      at transform (node_modules/@babel/core/src/transform.ts:29:20)
+          at transform.next (<anonymous>)
+      at evaluateSync (node_modules/gensync/index.js:251:28)
+      at sync (node_modules/gensync/index.js:89:14)
+      at fn (node_modules/@babel/core/src/errors/rewrite-stack-trace.ts:99:14)
+      at transformSync (node_modules/@babel/core/src/transform.ts:66:52)
+      at ScriptTransformer.transformSource (node_modules/@jest/transform/build/ScriptTransformer.js:545:31)
+      at ScriptTransformer._transformAndBuildScript (node_modules/@jest/transform/build/ScriptTransformer.js:674:40)
+      at ScriptTransformer.transform (node_modules/@jest/transform/build/ScriptTransformer.js:726:19)
+
+ FAIL  src/__tests__/inventory.test.ts
+  ● Test suite failed to run
+
+    Jest encountered an unexpected token
+
+    Jest failed to parse a file. This happens e.g. when your code or its dependencies use non-standard JavaScript syntax, or when Jest is not configured to support such syntax.
+
+    Out of the box Jest supports Babel, which will be used to transform your files into valid JS based on your Babel configuration.
+
+    By default "node_modules" folder is ignored by transformers.
+
+    Here's what you can do:
+     • If you are trying to use ECMAScript Modules, see https://jestjs.io/docs/ecmascript-modules for how to enable it.
+     • If you are trying to use TypeScript, see https://jestjs.io/docs/getting-started#using-typescript
+     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
+     • If you need a custom transformation specify a "transform" option in your config.
+     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
+
+    You'll find more details and examples of these config options in the docs:
+    https://jestjs.io/docs/configuration
+    For information about custom transformations, see:
+    https://jestjs.io/docs/code-transformation
+
+    Details:
+
+    SyntaxError: /media/abdullahsk03/Abdullah/OAFootwears/Backend/src/__tests__/inventory.test.ts: Missing semicolon. (10:15)
+
+       8 | import { IProduct, IStore } from '../utils/interface';
+       9 |
+    > 10 | let mongoServer: MongoMemoryServer;
+         |                ^
+      11 |
+      12 | beforeAll(async () => {
+      13 |   mongoServer = await MongoMemoryServer.create();
+
+      at constructor (node_modules/@babel/parser/src/parse-error.ts:95:45)
+      at Parser.toParseError [as raise] (node_modules/@babel/parser/src/tokenizer/index.ts:1496:19)
+      at Parser.raise [as semicolon] (node_modules/@babel/parser/src/parser/util.ts:149:10)
+      at Parser.semicolon [as parseVarStatement] (node_modules/@babel/parser/src/parser/statement.ts:1215:10)
+      at Parser.parseVarStatement [as parseStatementContent] (node_modules/@babel/parser/src/parser/statement.ts:566:21)
+      at Parser.parseStatementContent [as parseStatementLike] (node_modules/@babel/parser/src/parser/statement.ts:437:17)
+      at Parser.parseStatementLike [as parseModuleItem] (node_modules/@babel/parser/src/parser/statement.ts:374:17)
+      at Parser.parseModuleItem [as parseBlockOrModuleBlockBody] (node_modules/@babel/parser/src/parser/statement.ts:1406:16)
+      at Parser.parseBlockOrModuleBlockBody [as parseBlockBody] (node_modules/@babel/parser/src/parser/statement.ts:1380:10)
+      at Parser.parseBlockBody [as parseProgram] (node_modules/@babel/parser/src/parser/statement.ts:225:10)
+      at Parser.parseProgram [as parseTopLevel] (node_modules/@babel/parser/src/parser/statement.ts:203:25)
+      at Parser.parseTopLevel [as parse] (node_modules/@babel/parser/src/parser/index.ts:47:10)
+      at parse (node_modules/@babel/parser/src/index.ts:66:38)
+      at parser (node_modules/@babel/core/src/parser/index.ts:28:19)
+          at parser.next (<anonymous>)
+      at normalizeFile (node_modules/@babel/core/src/transformation/normalize-file.ts:50:24)
+          at normalizeFile.next (<anonymous>)
+      at run (node_modules/@babel/core/src/transformation/index.ts:40:36)
+          at run.next (<anonymous>)
+      at transform (node_modules/@babel/core/src/transform.ts:29:20)
+          at transform.next (<anonymous>)
+      at evaluateSync (node_modules/gensync/index.js:251:28)
+      at sync (node_modules/gensync/index.js:89:14)
+      at fn (node_modules/@babel/core/src/errors/rewrite-stack-trace.ts:99:14)
+      at transformSync (node_modules/@babel/core/src/transform.ts:66:52)
+      at ScriptTransformer.transformSource (node_modules/@jest/transform/build/ScriptTransformer.js:545:31)
+      at ScriptTransformer._transformAndBuildScript (node_modules/@jest/transform/build/ScriptTransformer.js:674:40)
+      at ScriptTransformer.transform (node_modules/@jest/transform/build/ScriptTransformer.js:726:19)
+
+ FAIL  src/__tests__/document.test.ts
+  ● Test suite failed to run
+
+    SyntaxError: /media/abdullahsk03/Abdullah/OAFootwears/Backend/src/__tests__/document.test.ts: Unexpected token, expected "," (15:49)
+
+      13 |         single: jest
+      14 |           .fn()
+    > 15 |           .mockImplementation((fieldName) => (req:any, res:any, next:any) => {
+         |                                                  ^
+      16 |             req.file = {
+      17 |               location: "https://fake-s3-url.com/test-document.pdf",
+      18 |             };
+
+      at constructor (node_modules/@babel/parser/src/parse-error.ts:95:45)
+      at Parser.toParseError [as raise] (node_modules/@babel/parser/src/tokenizer/index.ts:1496:19)
+      at Parser.raise [as unexpected] (node_modules/@babel/parser/src/tokenizer/index.ts:1536:16)
+      at Parser.unexpected [as expect] (node_modules/@babel/parser/src/parser/util.ts:157:12)
+      at Parser.expect [as parseParenAndDistinguishExpression] (node_modules/@babel/parser/src/parser/expression.ts:1755:14)
+      at Parser.parseParenAndDistinguishExpression [as parseExprAtom] (node_modules/@babel/parser/src/parser/expression.ts:1126:21)
+      at Parser.parseExprAtom [as parseExprSubscripts] (node_modules/@babel/parser/src/parser/expression.ts:709:23)
+      at Parser.parseExprSubscripts [as parseUpdate] (node_modules/@babel/parser/src/parser/expression.ts:688:21)
+      at Parser.parseUpdate [as parseMaybeUnary] (node_modules/@babel/parser/src/parser/expression.ts:650:23)
+      at Parser.parseMaybeUnary [as parseMaybeUnaryOrPrivate] (node_modules/@babel/parser/src/parser/expression.ts:389:14)
+      at Parser.parseMaybeUnaryOrPrivate [as parseExprOps] (node_modules/@babel/parser/src/parser/expression.ts:401:23)
+      at Parser.parseExprOps [as parseMaybeConditional] (node_modules/@babel/parser/src/parser/expression.ts:356:23)
+      at Parser.parseMaybeConditional [as parseMaybeAssign] (node_modules/@babel/parser/src/parser/expression.ts:298:21)
+      at Parser.parseMaybeAssign [as parseFunctionBody] (node_modules/@babel/parser/src/parser/expression.ts:2551:14)
+      at Parser.parseFunctionBody [as parseArrowExpression] (node_modules/@babel/parser/src/parser/expression.ts:2506:10)
+      at Parser.parseArrowExpression [as parseParenAndDistinguishExpression] (node_modules/@babel/parser/src/parser/expression.ts:1802:12)
+      at Parser.parseParenAndDistinguishExpression [as parseExprAtom] (node_modules/@babel/parser/src/parser/expression.ts:1126:21)
+      at Parser.parseExprAtom [as parseExprSubscripts] (node_modules/@babel/parser/src/parser/expression.ts:709:23)
+      at Parser.parseExprSubscripts [as parseUpdate] (node_modules/@babel/parser/src/parser/expression.ts:688:21)
+      at Parser.parseUpdate [as parseMaybeUnary] (node_modules/@babel/parser/src/parser/expression.ts:650:23)
+      at Parser.parseMaybeUnary [as parseMaybeUnaryOrPrivate] (node_modules/@babel/parser/src/parser/expression.ts:389:14)
+      at Parser.parseMaybeUnaryOrPrivate [as parseExprOps] (node_modules/@babel/parser/src/parser/expression.ts:401:23)
+      at Parser.parseExprOps [as parseMaybeConditional] (node_modules/@babel/parser/src/parser/expression.ts:356:23)
+      at Parser.parseMaybeConditional [as parseMaybeAssign] (node_modules/@babel/parser/src/parser/expression.ts:298:21)
+      at parseMaybeAssign (node_modules/@babel/parser/src/parser/expression.ts:252:12)
+      at Parser.callback [as allowInAnd] (node_modules/@babel/parser/src/parser/expression.ts:3116:12)
+      at Parser.allowInAnd [as parseMaybeAssignAllowIn] (node_modules/@babel/parser/src/parser/expression.ts:251:17)
+      at Parser.parseMaybeAssignAllowIn [as parseExprListItem] (node_modules/@babel/parser/src/parser/expression.ts:2728:18)
+      at Parser.parseExprListItem [as parseCallExpressionArguments] (node_modules/@babel/parser/src/parser/expression.ts:1005:14)
+      at Parser.parseCallExpressionArguments [as parseCoverCallAndAsyncArrowHead] (node_modules/@babel/parser/src/parser/expression.ts:883:29)
+      at Parser.parseCoverCallAndAsyncArrowHead [as parseSubscript] (node_modules/@babel/parser/src/parser/expression.ts:772:19)
+      at Parser.parseSubscript [as parseSubscripts] (node_modules/@babel/parser/src/parser/expression.ts:730:19)
+      at Parser.parseSubscripts [as parseExprSubscripts] (node_modules/@babel/parser/src/parser/expression.ts:715:17)
+      at Parser.parseExprSubscripts [as parseUpdate] (node_modules/@babel/parser/src/parser/expression.ts:688:21)
+      at Parser.parseUpdate [as parseMaybeUnary] (node_modules/@babel/parser/src/parser/expression.ts:650:23)
+      at Parser.parseMaybeUnary [as parseMaybeUnaryOrPrivate] (node_modules/@babel/parser/src/parser/expression.ts:389:14)
+      at Parser.parseMaybeUnaryOrPrivate [as parseExprOps] (node_modules/@babel/parser/src/parser/expression.ts:401:23)
+      at Parser.parseExprOps [as parseMaybeConditional] (node_modules/@babel/parser/src/parser/expression.ts:356:23)
+      at Parser.parseMaybeConditional [as parseMaybeAssign] (node_modules/@babel/parser/src/parser/expression.ts:298:21)
+      at parseMaybeAssign (node_modules/@babel/parser/src/parser/expression.ts:252:12)
+      at Parser.callback [as allowInAnd] (node_modules/@babel/parser/src/parser/expression.ts:3116:12)
+      at Parser.allowInAnd [as parseMaybeAssignAllowIn] (node_modules/@babel/parser/src/parser/expression.ts:251:17)
+      at Parser.parseMaybeAssignAllowIn [as parseObjectProperty] (node_modules/@babel/parser/src/parser/expression.ts:2279:16)
+      at Parser.parseObjectProperty [as parseObjPropValue] (node_modules/@babel/parser/src/parser/expression.ts:2335:12)
+      at Parser.parseObjPropValue [as parsePropertyDefinition] (node_modules/@babel/parser/src/parser/expression.ts:2182:17)
+      at Parser.parsePropertyDefinition [as parseObjectLike] (node_modules/@babel/parser/src/parser/expression.ts:2054:21)
+      at Parser.parseObjectLike [as parseExprAtom] (node_modules/@babel/parser/src/parser/expression.ts:1154:21)
+      at Parser.parseExprAtom [as parseExprSubscripts] (node_modules/@babel/parser/src/parser/expression.ts:709:23)
+      at Parser.parseExprSubscripts [as parseUpdate] (node_modules/@babel/parser/src/parser/expression.ts:688:21)
+      at Parser.parseUpdate [as parseMaybeUnary] (node_modules/@babel/parser/src/parser/expression.ts:650:23)
+      at Parser.parseMaybeUnary [as parseMaybeUnaryOrPrivate] (node_modules/@babel/parser/src/parser/expression.ts:389:14)
+      at Parser.parseMaybeUnaryOrPrivate [as parseExprOps] (node_modules/@babel/parser/src/parser/expression.ts:401:23)
+      at Parser.parseExprOps [as parseMaybeConditional] (node_modules/@babel/parser/src/parser/expression.ts:356:23)
+      at Parser.parseMaybeConditional [as parseMaybeAssign] (node_modules/@babel/parser/src/parser/expression.ts:298:21)
+      at parseMaybeAssign (node_modules/@babel/parser/src/parser/expression.ts:252:12)
+      at Parser.callback [as allowInAnd] (node_modules/@babel/parser/src/parser/expression.ts:3116:12)
+      at Parser.allowInAnd [as parseMaybeAssignAllowIn] (node_modules/@babel/parser/src/parser/expression.ts:251:17)
+      at Parser.parseMaybeAssignAllowIn [as parseObjectProperty] (node_modules/@babel/parser/src/parser/expression.ts:2279:16)
+      at Parser.parseObjectProperty [as parseObjPropValue] (node_modules/@babel/parser/src/parser/expression.ts:2335:12)
+      at Parser.parseObjPropValue [as parsePropertyDefinition] (node_modules/@babel/parser/src/parser/expression.ts:2182:17)
+      at Parser.parsePropertyDefinition [as parseObjectLike] (node_modules/@babel/parser/src/parser/expression.ts:2054:21)
+      at Parser.parseObjectLike [as parseExprAtom] (node_modules/@babel/parser/src/parser/expression.ts:1154:21)
+      at Parser.parseExprAtom [as parseExprSubscripts] (node_modules/@babel/parser/src/parser/expression.ts:709:23)
+      at Parser.parseExprSubscripts [as parseUpdate] (node_modules/@babel/parser/src/parser/expression.ts:688:21)
+      at Parser.parseUpdate [as parseMaybeUnary] (node_modules/@babel/parser/src/parser/expression.ts:650:23)
+      at Parser.parseMaybeUnary [as parseMaybeUnaryOrPrivate] (node_modules/@babel/parser/src/parser/expression.ts:389:14)
+      at Parser.parseMaybeUnaryOrPrivate [as parseExprOps] (node_modules/@babel/parser/src/parser/expression.ts:401:23)
+      at Parser.parseExprOps [as parseMaybeConditional] (node_modules/@babel/parser/src/parser/expression.ts:356:23)
+      at Parser.parseMaybeConditional [as parseMaybeAssign] (node_modules/@babel/parser/src/parser/expression.ts:298:21)
+      at parseMaybeAssign (node_modules/@babel/parser/src/parser/expression.ts:252:12)
+      at Parser.callback [as allowInAnd] (node_modules/@babel/parser/src/parser/expression.ts:3116:12)
+      at Parser.allowInAnd [as parseMaybeAssignAllowIn] (node_modules/@babel/parser/src/parser/expression.ts:251:17)
+      at Parser.parseMaybeAssignAllowIn [as parseParenAndDistinguishExpression] (node_modules/@babel/parser/src/parser/expression.ts:1779:16)
+      at Parser.parseParenAndDistinguishExpression [as parseExprAtom] (node_modules/@babel/parser/src/parser/expression.ts:1126:21)
+      at Parser.parseExprAtom [as parseExprSubscripts] (node_modules/@babel/parser/src/parser/expression.ts:709:23)
+      at Parser.parseExprSubscripts [as parseUpdate] (node_modules/@babel/parser/src/parser/expression.ts:688:21)
+      at Parser.parseUpdate [as parseMaybeUnary] (node_modules/@babel/parser/src/parser/expression.ts:650:23)
+      at Parser.parseMaybeUnary [as parseMaybeUnaryOrPrivate] (node_modules/@babel/parser/src/parser/expression.ts:389:14)
+      at Parser.parseMaybeUnaryOrPrivate [as parseExprOps] (node_modules/@babel/parser/src/parser/expression.ts:401:23)
+      at Parser.parseExprOps [as parseMaybeConditional] (node_modules/@babel/parser/src/parser/expression.ts:356:23)
+      at Parser.parseMaybeConditional [as parseMaybeAssign] (node_modules/@babel/parser/src/parser/expression.ts:298:21)
+      at Parser.parseMaybeAssign [as parseFunctionBody] (node_modules/@babel/parser/src/parser/expression.ts:2551:14)
+      at Parser.parseFunctionBody [as parseArrowExpression] (node_modules/@babel/parser/src/parser/expression.ts:2506:10)
+      at Parser.parseArrowExpression [as parseParenAndDistinguishExpression] (node_modules/@babel/parser/src/parser/expression.ts:1802:12)
+      at Parser.parseParenAndDistinguishExpression [as parseExprAtom] (node_modules/@babel/parser/src/parser/expression.ts:1126:21)
+      at Parser.parseExprAtom [as parseExprSubscripts] (node_modules/@babel/parser/src/parser/expression.ts:709:23)
+      at Parser.parseExprSubscripts [as parseUpdate] (node_modules/@babel/parser/src/parser/expression.ts:688:21)
+      at Parser.parseUpdate [as parseMaybeUnary] (node_modules/@babel/parser/src/parser/expression.ts:650:23)
+      at Parser.parseMaybeUnary [as parseMaybeUnaryOrPrivate] (node_modules/@babel/parser/src/parser/expression.ts:389:14)
+      at Parser.parseMaybeUnaryOrPrivate [as parseExprOps] (node_modules/@babel/parser/src/parser/expression.ts:401:23)
+      at Parser.parseExprOps [as parseMaybeConditional] (node_modules/@babel/parser/src/parser/expression.ts:356:23)
+      at Parser.parseMaybeConditional [as parseMaybeAssign] (node_modules/@babel/parser/src/parser/expression.ts:298:21)
+      at parseMaybeAssign (node_modules/@babel/parser/src/parser/expression.ts:252:12)
+      at Parser.callback [as allowInAnd] (node_modules/@babel/parser/src/parser/expression.ts:3116:12)
+      at Parser.allowInAnd [as parseMaybeAssignAllowIn] (node_modules/@babel/parser/src/parser/expression.ts:251:17)
+      at Parser.parseMaybeAssignAllowIn [as parseExprListItem] (node_modules/@babel/parser/src/parser/expression.ts:2728:18)
+      at Parser.parseExprListItem [as parseCallExpressionArguments] (node_modules/@babel/parser/src/parser/expression.ts:1005:14)
+      at Parser.parseCallExpressionArguments [as parseCoverCallAndAsyncArrowHead] (node_modules/@babel/parser/src/parser/expression.ts:883:29)
+      at Parser.parseCoverCallAndAsyncArrowHead [as parseSubscript] (node_modules/@babel/parser/src/parser/expression.ts:772:19)
+      at Parser.parseSubscript [as parseSubscripts] (node_modules/@babel/parser/src/parser/expression.ts:730:19)
+
+ FAIL  src/__tests__/auth.test.ts
+  ● Test suite failed to run
+
+    Jest encountered an unexpected token
+
+    Jest failed to parse a file. This happens e.g. when your code or its dependencies use non-standard JavaScript syntax, or when Jest is not configured to support such syntax.
+
+    Out of the box Jest supports Babel, which will be used to transform your files into valid JS based on your Babel configuration.
+
+    By default "node_modules" folder is ignored by transformers.
+
+    Here's what you can do:
+     • If you are trying to use ECMAScript Modules, see https://jestjs.io/docs/ecmascript-modules for how to enable it.
+     • If you are trying to use TypeScript, see https://jestjs.io/docs/getting-started#using-typescript
+     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
+     • If you need a custom transformation specify a "transform" option in your config.
+     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
+
+    You'll find more details and examples of these config options in the docs:
+    https://jestjs.io/docs/configuration
+    For information about custom transformations, see:
+    https://jestjs.io/docs/code-transformation
+
+    Details:
+
+    SyntaxError: /media/abdullahsk03/Abdullah/OAFootwears/Backend/src/__tests__/auth.test.ts: Missing semicolon. (8:15)
+
+       6 | import bcrypt from 'bcrypt';
+       7 |
+    >  8 | let mongoServer: MongoMemoryServer;
+         |                ^
+       9 |
+      10 | beforeAll(async () => {
+      11 |   mongoServer = await MongoMemoryServer.create();
+
+      at constructor (node_modules/@babel/parser/src/parse-error.ts:95:45)
+      at Parser.toParseError [as raise] (node_modules/@babel/parser/src/tokenizer/index.ts:1496:19)
+      at Parser.raise [as semicolon] (node_modules/@babel/parser/src/parser/util.ts:149:10)
+      at Parser.semicolon [as parseVarStatement] (node_modules/@babel/parser/src/parser/statement.ts:1215:10)
+      at Parser.parseVarStatement [as parseStatementContent] (node_modules/@babel/parser/src/parser/statement.ts:566:21)
+      at Parser.parseStatementContent [as parseStatementLike] (node_modules/@babel/parser/src/parser/statement.ts:437:17)
+      at Parser.parseStatementLike [as parseModuleItem] (node_modules/@babel/parser/src/parser/statement.ts:374:17)
+      at Parser.parseModuleItem [as parseBlockOrModuleBlockBody] (node_modules/@babel/parser/src/parser/statement.ts:1406:16)
+      at Parser.parseBlockOrModuleBlockBody [as parseBlockBody] (node_modules/@babel/parser/src/parser/statement.ts:1380:10)
+      at Parser.parseBlockBody [as parseProgram] (node_modules/@babel/parser/src/parser/statement.ts:225:10)
+      at Parser.parseProgram [as parseTopLevel] (node_modules/@babel/parser/src/parser/statement.ts:203:25)
+      at Parser.parseTopLevel [as parse] (node_modules/@babel/parser/src/parser/index.ts:47:10)
+      at parse (node_modules/@babel/parser/src/index.ts:66:38)
+      at parser (node_modules/@babel/core/src/parser/index.ts:28:19)
+          at parser.next (<anonymous>)
+      at normalizeFile (node_modules/@babel/core/src/transformation/normalize-file.ts:50:24)
+          at normalizeFile.next (<anonymous>)
+      at run (node_modules/@babel/core/src/transformation/index.ts:40:36)
+          at run.next (<anonymous>)
+      at transform (node_modules/@babel/core/src/transform.ts:29:20)
+          at transform.next (<anonymous>)
+      at evaluateSync (node_modules/gensync/index.js:251:28)
+      at sync (node_modules/gensync/index.js:89:14)
+      at fn (node_modules/@babel/core/src/errors/rewrite-stack-trace.ts:99:14)
+      at transformSync (node_modules/@babel/core/src/transform.ts:66:52)
+      at ScriptTransformer.transformSource (node_modules/@jest/transform/build/ScriptTransformer.js:545:31)
+      at ScriptTransformer._transformAndBuildScript (node_modules/@jest/transform/build/ScriptTransformer.js:674:40)
+      at ScriptTransformer.transform (node_modules/@jest/transform/build/ScriptTransformer.js:726:19)
+
+[14:35:50.593] INFO (13012): Server running on http://localhost:5000
+[14:35:50.823] INFO (13012): MongoDB Connected: oafootwears-shard-00-00.zuzlc.mongodb.net
+ FAIL  dist/src/__tests__/document.test.js (5.612 s)
+  ● Document Operations › should upload a document
+
+    MongooseError: Can't call `openUri()` on an active connection with different connection strings. Make sure you aren't calling `mongoose.connect()` multiple times. See: https://mongoosejs.com/docs/connections.html#multiple_connections
+
+      32 |   mongoServer = await MongoMemoryServer.create();
+      33 |   const mongoUri = mongoServer.getUri();
+    > 34 |   await mongoose.connect(mongoUri);
+         |                  ^
+      35 | });
+      36 |
+      37 | afterAll(async () => {
+
+      at NativeConnection.createClient (node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:239:13)
+      at NativeConnection.openUri (node_modules/mongoose/lib/connection.js:1016:34)
+      at Mongoose.connect (node_modules/mongoose/lib/mongoose.js:446:15)
+      at connect (src/__tests__/document.test.ts:34:18)
+      at fulfilled (dist/src/__tests__/document.test.js:30:24)
+
+  ● Document Operations › should delete a document
+
+    MongooseError: Can't call `openUri()` on an active connection with different connection strings. Make sure you aren't calling `mongoose.connect()` multiple times. See: https://mongoosejs.com/docs/connections.html#multiple_connections
+
+      32 |   mongoServer = await MongoMemoryServer.create();
+      33 |   const mongoUri = mongoServer.getUri();
+    > 34 |   await mongoose.connect(mongoUri);
+         |                  ^
+      35 | });
+      36 |
+      37 | afterAll(async () => {
+
+      at NativeConnection.createClient (node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:239:13)
+      at NativeConnection.openUri (node_modules/mongoose/lib/connection.js:1016:34)
+      at Mongoose.connect (node_modules/mongoose/lib/mongoose.js:446:15)
+      at connect (src/__tests__/document.test.ts:34:18)
+      at fulfilled (dist/src/__tests__/document.test.js:30:24)
+
+[14:35:51.752] INFO (12987): MongoDB Connected: oafootwears-shard-00-02.zuzlc.mongodb.net
+[14:35:51.821] INFO (12988): MongoDB Connected: oafootwears-shard-00-02.zuzlc.mongodb.net
+[14:35:51.762] INFO (12995): MongoDB Connected: oafootwears-shard-00-00.zuzlc.mongodb.net
+[14:35:51.757] INFO (12989): MongoDB Connected: oafootwears-shard-00-01.zuzlc.mongodb.net
+[14:35:51.448] WARN (13012): MongoDB disconnected
+[14:35:51.770] INFO (13001): MongoDB Connected: oafootwears-shard-00-01.zuzlc.mongodb.net
+ FAIL  dist/src/__tests__/inventory.test.js (6.514 s)
+  ● Inventory Operations › should update inventory
+
+    MongooseError: Can't call `openUri()` on an active connection with different connection strings. Make sure you aren't calling `mongoose.connect()` multiple times. See: https://mongoosejs.com/docs/connections.html#multiple_connections
+
+      13 |   mongoServer = await MongoMemoryServer.create();
+      14 |   const mongoUri = mongoServer.getUri();
+    > 15 |   await mongoose.connect(mongoUri);
+         |                  ^
+      16 | });
+      17 |
+      18 | afterAll(async () => {
+
+      at NativeConnection.createClient (node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:239:13)
+      at NativeConnection.openUri (node_modules/mongoose/lib/connection.js:1016:34)
+      at Mongoose.connect (node_modules/mongoose/lib/mongoose.js:446:15)
+      at connect (src/__tests__/inventory.test.ts:15:18)
+      at fulfilled (dist/src/__tests__/inventory.test.js:12:24)
+
+  ● Inventory Operations › should get all inventory
+
+    MongooseError: Can't call `openUri()` on an active connection with different connection strings. Make sure you aren't calling `mongoose.connect()` multiple times. See: https://mongoosejs.com/docs/connections.html#multiple_connections
+
+      13 |   mongoServer = await MongoMemoryServer.create();
+      14 |   const mongoUri = mongoServer.getUri();
+    > 15 |   await mongoose.connect(mongoUri);
+         |                  ^
+      16 | });
+      17 |
+      18 | afterAll(async () => {
+
+      at NativeConnection.createClient (node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:239:13)
+      at NativeConnection.openUri (node_modules/mongoose/lib/connection.js:1016:34)
+      at Mongoose.connect (node_modules/mongoose/lib/mongoose.js:446:15)
+      at connect (src/__tests__/inventory.test.ts:15:18)
+      at fulfilled (dist/src/__tests__/inventory.test.js:12:24)
+
+  ● Inventory Operations › should get inventory by store
+
+    MongooseError: Can't call `openUri()` on an active connection with different connection strings. Make sure you aren't calling `mongoose.connect()` multiple times. See: https://mongoosejs.com/docs/connections.html#multiple_connections
+
+      13 |   mongoServer = await MongoMemoryServer.create();
+      14 |   const mongoUri = mongoServer.getUri();
+    > 15 |   await mongoose.connect(mongoUri);
+         |                  ^
+      16 | });
+      17 |
+      18 | afterAll(async () => {
+
+      at NativeConnection.createClient (node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:239:13)
+      at NativeConnection.openUri (node_modules/mongoose/lib/connection.js:1016:34)
+      at Mongoose.connect (node_modules/mongoose/lib/mongoose.js:446:15)
+      at connect (src/__tests__/inventory.test.ts:15:18)
+      at fulfilled (dist/src/__tests__/inventory.test.js:12:24)
+
+
+  ● Test suite failed to run
+
+    listen EADDRINUSE: address already in use :::5000
+
+      39 | const PORT = process.env.PORT || 5000;
+      40 |
+    > 41 | const server = app.listen(PORT, () => {
+         |                    ^
+      42 |   logger.info(`Server running on http://localhost:${PORT}`.bgCyan);
+      43 | });
+      44 |
+
+      at Function.listen (node_modules/express/lib/application.js:635:24)
+      at Object.listen (index.ts:41:20)
+      at Object.require (src/__tests__/inventory.test.ts:2:1)
+
+ FAIL  dist/src/__tests__/product.test.js (6.535 s)
+  ● Product Operations › should create a new product
+
+    MongooseError: Can't call `openUri()` on an active connection with different connection strings. Make sure you aren't calling `mongoose.connect()` multiple times. See: https://mongoosejs.com/docs/connections.html#multiple_connections
+
+      10 |   mongoServer = await MongoMemoryServer.create();
+      11 |   const mongoUri = mongoServer.getUri();
+    > 12 |   await mongoose.connect(mongoUri);
+         |                  ^
+      13 | });
+      14 |
+      15 | afterAll(async () => {
+
+      at NativeConnection.createClient (node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:239:13)
+      at NativeConnection.openUri (node_modules/mongoose/lib/connection.js:1016:34)
+      at Mongoose.connect (node_modules/mongoose/lib/mongoose.js:446:15)
+      at connect (src/__tests__/product.test.ts:12:18)
+      at fulfilled (dist/src/__tests__/product.test.js:12:24)
+
+  ● Product Operations › should get all products
+
+    MongooseError: Can't call `openUri()` on an active connection with different connection strings. Make sure you aren't calling `mongoose.connect()` multiple times. See: https://mongoosejs.com/docs/connections.html#multiple_connections
+
+      10 |   mongoServer = await MongoMemoryServer.create();
+      11 |   const mongoUri = mongoServer.getUri();
+    > 12 |   await mongoose.connect(mongoUri);
+         |                  ^
+      13 | });
+      14 |
+      15 | afterAll(async () => {
+
+      at NativeConnection.createClient (node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:239:13)
+      at NativeConnection.openUri (node_modules/mongoose/lib/connection.js:1016:34)
+      at Mongoose.connect (node_modules/mongoose/lib/mongoose.js:446:15)
+      at connect (src/__tests__/product.test.ts:12:18)
+      at fulfilled (dist/src/__tests__/product.test.js:12:24)
+
+  ● Product Operations › should update a product
+
+    MongooseError: Can't call `openUri()` on an active connection with different connection strings. Make sure you aren't calling `mongoose.connect()` multiple times. See: https://mongoosejs.com/docs/connections.html#multiple_connections
+
+      10 |   mongoServer = await MongoMemoryServer.create();
+      11 |   const mongoUri = mongoServer.getUri();
+    > 12 |   await mongoose.connect(mongoUri);
+         |                  ^
+      13 | });
+      14 |
+      15 | afterAll(async () => {
+
+      at NativeConnection.createClient (node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:239:13)
+      at NativeConnection.openUri (node_modules/mongoose/lib/connection.js:1016:34)
+      at Mongoose.connect (node_modules/mongoose/lib/mongoose.js:446:15)
+      at connect (src/__tests__/product.test.ts:12:18)
+      at fulfilled (dist/src/__tests__/product.test.js:12:24)
+
+  ● Product Operations › should delete a product
+
+    MongooseError: Can't call `openUri()` on an active connection with different connection strings. Make sure you aren't calling `mongoose.connect()` multiple times. See: https://mongoosejs.com/docs/connections.html#multiple_connections
+
+      10 |   mongoServer = await MongoMemoryServer.create();
+      11 |   const mongoUri = mongoServer.getUri();
+    > 12 |   await mongoose.connect(mongoUri);
+         |                  ^
+      13 | });
+      14 |
+      15 | afterAll(async () => {
+
+      at NativeConnection.createClient (node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:239:13)
+      at NativeConnection.openUri (node_modules/mongoose/lib/connection.js:1016:34)
+      at Mongoose.connect (node_modules/mongoose/lib/mongoose.js:446:15)
+      at connect (src/__tests__/product.test.ts:12:18)
+      at fulfilled (dist/src/__tests__/product.test.js:12:24)
+
+
+  ● Test suite failed to run
+
+    listen EADDRINUSE: address already in use :::5000
+
+      39 | const PORT = process.env.PORT || 5000;
+      40 |
+    > 41 | const server = app.listen(PORT, () => {
+         |                    ^
+      42 |   logger.info(`Server running on http://localhost:${PORT}`.bgCyan);
+      43 | });
+      44 |
+
+      at Function.listen (node_modules/express/lib/application.js:635:24)
+      at Object.listen (index.ts:41:20)
+      at Object.require (src/__tests__/product.test.ts:2:1)
+
+[14:35:52.389] WARN (12987): MongoDB disconnected
+[14:35:52.433] WARN (12988): MongoDB disconnected
+[14:35:52.411] WARN (12989): MongoDB disconnected
+[14:35:52.437] WARN (12995): MongoDB disconnected
+[14:35:52.401] WARN (13001): MongoDB disconnected
+ FAIL  dist/src/__tests__/order.test.js (6.572 s)
+  ● Order Operations › should create a new order
+
+    MongooseError: Can't call `openUri()` on an active connection with different connection strings. Make sure you aren't calling `mongoose.connect()` multiple times. See: https://mongoosejs.com/docs/connections.html#multiple_connections
+
+      13 |   mongoServer = await MongoMemoryServer.create();
+      14 |   const mongoUri = mongoServer.getUri();
+    > 15 |   await mongoose.connect(mongoUri);
+         |                  ^
+      16 | });
+      17 |
+      18 | afterAll(async () => {
+
+      at NativeConnection.createClient (node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:239:13)
+      at NativeConnection.openUri (node_modules/mongoose/lib/connection.js:1016:34)
+      at Mongoose.connect (node_modules/mongoose/lib/mongoose.js:446:15)
+      at connect (src/__tests__/order.test.ts:15:18)
+      at fulfilled (dist/src/__tests__/order.test.js:12:24)
+
+  ● Order Operations › should get all orders
+
+    MongooseError: Can't call `openUri()` on an active connection with different connection strings. Make sure you aren't calling `mongoose.connect()` multiple times. See: https://mongoosejs.com/docs/connections.html#multiple_connections
+
+      13 |   mongoServer = await MongoMemoryServer.create();
+      14 |   const mongoUri = mongoServer.getUri();
+    > 15 |   await mongoose.connect(mongoUri);
+         |                  ^
+      16 | });
+      17 |
+      18 | afterAll(async () => {
+
+      at NativeConnection.createClient (node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:239:13)
+      at NativeConnection.openUri (node_modules/mongoose/lib/connection.js:1016:34)
+      at Mongoose.connect (node_modules/mongoose/lib/mongoose.js:446:15)
+      at connect (src/__tests__/order.test.ts:15:18)
+      at fulfilled (dist/src/__tests__/order.test.js:12:24)
+
+  ● Order Operations › should update order status
+
+    MongooseError: Can't call `openUri()` on an active connection with different connection strings. Make sure you aren't calling `mongoose.connect()` multiple times. See: https://mongoosejs.com/docs/connections.html#multiple_connections
+
+      13 |   mongoServer = await MongoMemoryServer.create();
+      14 |   const mongoUri = mongoServer.getUri();
+    > 15 |   await mongoose.connect(mongoUri);
+         |                  ^
+      16 | });
+      17 |
+      18 | afterAll(async () => {
+
+      at NativeConnection.createClient (node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:239:13)
+      at NativeConnection.openUri (node_modules/mongoose/lib/connection.js:1016:34)
+      at Mongoose.connect (node_modules/mongoose/lib/mongoose.js:446:15)
+      at connect (src/__tests__/order.test.ts:15:18)
+      at fulfilled (dist/src/__tests__/order.test.js:12:24)
+
+
+  ● Test suite failed to run
+
+    listen EADDRINUSE: address already in use :::5000
+
+      39 | const PORT = process.env.PORT || 5000;
+      40 |
+    > 41 | const server = app.listen(PORT, () => {
+         |                    ^
+      42 |   logger.info(`Server running on http://localhost:${PORT}`.bgCyan);
+      43 | });
+      44 |
+
+      at Function.listen (node_modules/express/lib/application.js:635:24)
+      at Object.listen (index.ts:41:20)
+      at Object.require (src/__tests__/order.test.ts:2:1)
+
+ FAIL  dist/src/__tests__/auth.test.js (6.574 s)
+  ● Authentication › should register a new user
+
+    MongooseError: Can't call `openUri()` on an active connection with different connection strings. Make sure you aren't calling `mongoose.connect()` multiple times. See: https://mongoosejs.com/docs/connections.html#multiple_connections
+
+      11 |   mongoServer = await MongoMemoryServer.create();
+      12 |   const mongoUri = mongoServer.getUri();
+    > 13 |   await mongoose.connect(mongoUri);
+         |                  ^
+      14 | });
+      15 |
+      16 | afterAll(async () => {
+
+      at NativeConnection.createClient (node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:239:13)
+      at NativeConnection.openUri (node_modules/mongoose/lib/connection.js:1016:34)
+      at Mongoose.connect (node_modules/mongoose/lib/mongoose.js:446:15)
+      at connect (src/__tests__/auth.test.ts:13:18)
+      at fulfilled (dist/src/__tests__/auth.test.js:12:24)
+
+  ● Authentication › should login a user
+
+    MongooseError: Can't call `openUri()` on an active connection with different connection strings. Make sure you aren't calling `mongoose.connect()` multiple times. See: https://mongoosejs.com/docs/connections.html#multiple_connections
+
+      11 |   mongoServer = await MongoMemoryServer.create();
+      12 |   const mongoUri = mongoServer.getUri();
+    > 13 |   await mongoose.connect(mongoUri);
+         |                  ^
+      14 | });
+      15 |
+      16 | afterAll(async () => {
+
+      at NativeConnection.createClient (node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:239:13)
+      at NativeConnection.openUri (node_modules/mongoose/lib/connection.js:1016:34)
+      at Mongoose.connect (node_modules/mongoose/lib/mongoose.js:446:15)
+      at connect (src/__tests__/auth.test.ts:13:18)
+      at fulfilled (dist/src/__tests__/auth.test.js:12:24)
+
+  ● Authentication › should logout a user
+
+    MongooseError: Can't call `openUri()` on an active connection with different connection strings. Make sure you aren't calling `mongoose.connect()` multiple times. See: https://mongoosejs.com/docs/connections.html#multiple_connections
+
+      11 |   mongoServer = await MongoMemoryServer.create();
+      12 |   const mongoUri = mongoServer.getUri();
+    > 13 |   await mongoose.connect(mongoUri);
+         |                  ^
+      14 | });
+      15 |
+      16 | afterAll(async () => {
+
+      at NativeConnection.createClient (node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:239:13)
+      at NativeConnection.openUri (node_modules/mongoose/lib/connection.js:1016:34)
+      at Mongoose.connect (node_modules/mongoose/lib/mongoose.js:446:15)
+      at connect (src/__tests__/auth.test.ts:13:18)
+      at fulfilled (dist/src/__tests__/auth.test.js:12:24)
+
+
+  ● Test suite failed to run
+
+    listen EADDRINUSE: address already in use :::5000
+
+      39 | const PORT = process.env.PORT || 5000;
+      40 |
+    > 41 | const server = app.listen(PORT, () => {
+         |                    ^
+      42 |   logger.info(`Server running on http://localhost:${PORT}`.bgCyan);
+      43 | });
+      44 |
+
+      at Function.listen (node_modules/express/lib/application.js:635:24)
+      at Object.listen (index.ts:41:20)
+      at Object.require (src/__tests__/auth.test.ts:2:1)
+
+ FAIL  dist/src/__tests__/store.test.js (6.567 s)
+  ● Store Operations › should create a new store
+
+    MongooseError: Can't call `openUri()` on an active connection with different connection strings. Make sure you aren't calling `mongoose.connect()` multiple times. See: https://mongoosejs.com/docs/connections.html#multiple_connections
+
+      12 |   mongoServer = await MongoMemoryServer.create();
+      13 |   const mongoUri = mongoServer.getUri();
+    > 14 |   await mongoose.connect(mongoUri);
+         |                  ^
+      15 | });
+      16 |
+      17 | afterAll(async () => {
+
+      at NativeConnection.createClient (node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:239:13)
+      at NativeConnection.openUri (node_modules/mongoose/lib/connection.js:1016:34)
+      at Mongoose.connect (node_modules/mongoose/lib/mongoose.js:446:15)
+      at connect (src/__tests__/store.test.ts:14:18)
+      at fulfilled (dist/src/__tests__/store.test.js:12:24)
+
+  ● Store Operations › should get all stores
+
+    MongooseError: Can't call `openUri()` on an active connection with different connection strings. Make sure you aren't calling `mongoose.connect()` multiple times. See: https://mongoosejs.com/docs/connections.html#multiple_connections
+
+      12 |   mongoServer = await MongoMemoryServer.create();
+      13 |   const mongoUri = mongoServer.getUri();
+    > 14 |   await mongoose.connect(mongoUri);
+         |                  ^
+      15 | });
+      16 |
+      17 | afterAll(async () => {
+
+      at NativeConnection.createClient (node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:239:13)
+      at NativeConnection.openUri (node_modules/mongoose/lib/connection.js:1016:34)
+      at Mongoose.connect (node_modules/mongoose/lib/mongoose.js:446:15)
+      at connect (src/__tests__/store.test.ts:14:18)
+      at fulfilled (dist/src/__tests__/store.test.js:12:24)
+
+  ● Store Operations › should update a store
+
+    MongooseError: Can't call `openUri()` on an active connection with different connection strings. Make sure you aren't calling `mongoose.connect()` multiple times. See: https://mongoosejs.com/docs/connections.html#multiple_connections
+
+      12 |   mongoServer = await MongoMemoryServer.create();
+      13 |   const mongoUri = mongoServer.getUri();
+    > 14 |   await mongoose.connect(mongoUri);
+         |                  ^
+      15 | });
+      16 |
+      17 | afterAll(async () => {
+
+      at NativeConnection.createClient (node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:239:13)
+      at NativeConnection.openUri (node_modules/mongoose/lib/connection.js:1016:34)
+      at Mongoose.connect (node_modules/mongoose/lib/mongoose.js:446:15)
+      at connect (src/__tests__/store.test.ts:14:18)
+      at fulfilled (dist/src/__tests__/store.test.js:12:24)
+
+  ● Store Operations › should delete a store
+
+    MongooseError: Can't call `openUri()` on an active connection with different connection strings. Make sure you aren't calling `mongoose.connect()` multiple times. See: https://mongoosejs.com/docs/connections.html#multiple_connections
+
+      12 |   mongoServer = await MongoMemoryServer.create();
+      13 |   const mongoUri = mongoServer.getUri();
+    > 14 |   await mongoose.connect(mongoUri);
+         |                  ^
+      15 | });
+      16 |
+      17 | afterAll(async () => {
+
+      at NativeConnection.createClient (node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:239:13)
+      at NativeConnection.openUri (node_modules/mongoose/lib/connection.js:1016:34)
+      at Mongoose.connect (node_modules/mongoose/lib/mongoose.js:446:15)
+      at connect (src/__tests__/store.test.ts:14:18)
+      at fulfilled (dist/src/__tests__/store.test.js:12:24)
+
+
+  ● Test suite failed to run
+
+    listen EADDRINUSE: address already in use :::5000
+
+      39 | const PORT = process.env.PORT || 5000;
+      40 |
+    > 41 | const server = app.listen(PORT, () => {
+         |                    ^
+      42 |   logger.info(`Server running on http://localhost:${PORT}`.bgCyan);
+      43 | });
+      44 
