@@ -42,12 +42,12 @@ const server = app.listen(PORT, () => {
   logger.info(`Server running on http://localhost:${PORT}`.bgCyan);
 });
 
-// Graceful shutdown
-process.on('SIGTERM', () => {
-  logger.info('SIGTERM signal received: closing HTTP server');
-  server.close(() => {
-    logger.info('HTTP server closed');
-  });
-});
+// // Graceful shutdown
+// process.on('SIGTERM', () => {
+//   logger.info('SIGTERM signal received: closing HTTP server');
+//   server.close(() => {
+//     logger.info('HTTP server closed');
+//   });
+// });
 
 export default app;
