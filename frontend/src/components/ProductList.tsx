@@ -12,7 +12,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
-import { fetchApi } from "@/utils/api"
+import { fetchApi } from "../../utils/api"
 
 interface Product {
   id: number;

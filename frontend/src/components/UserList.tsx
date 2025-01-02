@@ -18,7 +18,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-import { fetchApi } from "@/utils/api"
+import { fetchApi } from "../../utils/api"
 
 interface User {
   id: number;

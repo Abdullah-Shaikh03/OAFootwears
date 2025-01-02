@@ -8,8 +8,8 @@ const nextConfig = {
   },
   experimental: {
     serverActions: {
-      bodySizeLimit: '1mb', // Adjust as per your requirements
-      allowedOrigins: ['https://your-allowed-origin.com'], // Example
+      bodySizeLimit: 10 * 1024 * 1024, // Adjust as per your requirements
+      // allowedOrigins: ['https://your-allowed-origin.com'], // Example
     },
   },
 };

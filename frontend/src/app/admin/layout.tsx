@@ -12,7 +12,7 @@ export default function AdminLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body className="bg-[#F5F5F5]">
         <div className="flex h-screen bg-[#F5F5F5]">
           <AdminSidebar />

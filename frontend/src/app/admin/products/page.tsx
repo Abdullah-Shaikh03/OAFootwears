@@ -1,14 +1,5 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table"
 import { fetchApi } from "../../../../utils/api"
 import { ProductList } from "@/components/ProductList"
 
