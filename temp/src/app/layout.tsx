@@ -3,7 +3,7 @@ import { Montserrat } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import { getServerSession } from "next-auth/next";
 import { Session } from "next-auth";
-import { authOptions } from "./api/auth/[...nextauth]/route";
+import { authOptions } from "@/lib/authOptions";
 import SessionProvider from "@/components/SessionProvider";
 import ThemeProvider from "@/components/theme-provider";
 

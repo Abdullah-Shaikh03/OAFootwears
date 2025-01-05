@@ -11,14 +11,19 @@ interface MongooseCache {
   promise: Promise<mongoose.Connection> | null;
 }
 
+// Augment the global scope without using namespace
 declare global {
-  let mongoose: MongooseCache;
+  // eslint-disable-next-line no-var
+  var mongoose: MongooseCache | undefined;
 }
 
-let cached: MongooseCache = global.mongoose || { conn: null, promise: null };
+const cached = (global as any).mongoose ?? {
+  conn: null,
+  promise: null,
+};
 
-if (!cached) {
-  cached = global.mongoose = { conn: null, promise: null };
+if (!global.mongoose) {
+  global.mongoose = cached;
 }
 
 async function dbConnect() {
@@ -47,5 +52,3 @@ async function dbConnect() {
 }
 
 export default dbConnect;
-
-

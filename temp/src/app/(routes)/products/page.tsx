@@ -6,6 +6,7 @@ import { useSession } from "next-auth/react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Session } from "next-auth";
+import Image from "next/image";
 interface Product {
   _id: string;
   brandName: string;
@@ -48,7 +49,7 @@ export default function ProductsPage() {
               <Card className="group  hover:border-gray-700 transition-all">
                 <CardContent className="p-4">
                   <div className="aspect-square mb-4 overflow-hidden rounded-lg">
-                    <img
+                    <Image
                       src={product.imageUrls[0]}
                       alt={product.brandName}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
@@ -77,7 +78,7 @@ export default function ProductsPage() {
                 <CardContent className="p-4">
                   <div className="flex gap-4">
                     <div className="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0">
-                      <img
+                      <Image
                         src={product.imageUrls[0]}
                         alt={product.brandName}
                         className="w-full h-full object-cover"

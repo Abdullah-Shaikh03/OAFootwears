@@ -20,6 +20,7 @@ import {
   Share2,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 export default function ProductDetail({
   params,
@@ -188,7 +189,7 @@ export default function ProductDetail({
                 transition={{ duration: 0.2 }}
                 className="aspect-square relative rounded-2xl overflow-hidden bg-gray-100 dark:bg-gray-800"
               >
-                <img
+                <Image
                   src={product.imageUrls[currentImageIndex]}
                   alt={`${product.brandName} - View ${currentImageIndex + 1}`}
                   className="object-cover w-full h-full"
@@ -227,7 +228,7 @@ export default function ProductDetail({
                     currentImageIndex === index && "ring-2 ring-primary"
                   )}
                 >
-                  <img
+                  <Image
                     src={url}
                     alt={`${product.brandName} thumbnail ${index + 1}`}
                     className="object-cover w-full h-full"
