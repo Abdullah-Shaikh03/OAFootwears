@@ -10,9 +10,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { TextRevealCard } from '@/components/ui/text-reveal-card';
 import { useToast } from "@/hooks/use-toast"
 
-const {toast} = useToast()
 
 export default function NewProduct() {
+  const {toast} = useToast()
   const [product, setProduct] = useState({ brandName: '', article: '', style:'', price: '', imageUrls: [''] });
   const router = useRouter();
   const { data: session } = useSession();
