@@ -30,12 +30,12 @@ export async function POST(req: Request) {
     const hashedPassword = await hash(password, 12);
 
     // Create new user
-    // const user = await UserModels.create({
-    //   name,
-    //   email,
-    //   password: hashedPassword,
-    //   role: "user",
-    // });
+    const user = await UserModels.create({
+      name,
+      email,
+      password: hashedPassword,
+      role: "user",
+    });
 
     return NextResponse.json(
       { message: "User created successfully" },

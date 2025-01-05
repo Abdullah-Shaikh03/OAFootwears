@@ -70,6 +70,10 @@ export default function NewProduct() {
               <Input type="text" id="article" name="article" value={product.article} onChange={handleChange} required />
             </div>
             <div>
+              <Label htmlFor="style">Style</Label>
+              <Input type="text" id="style" name="style" value={product.article} onChange={handleChange} required />
+            </div>
+            <div>
               <Label htmlFor="price">Price</Label>
               <Input type="number" id="price" name="price" value={product.price} onChange={handleChange} required />
             </div>
