@@ -45,7 +45,7 @@ export default function ProductsPage() {
         {/* Desktop Grid View */}
         <div className="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map((product) => (
-            <Link href={`/products/${product._id}`} key={product._id}>
+            <Link href={`/products/${product._id}`} key={product._id} >
               <Card className="group  hover:border-gray-700 transition-all">
                 <CardContent className="p-4">
                   <div className="aspect-square mb-4 overflow-hidden rounded-lg">
@@ -74,7 +74,7 @@ export default function ProductsPage() {
         <div className="md:hidden space-y-4">
           {products.map((product) => (
             <Link href={`/products/${product._id}`} key={product._id}>
-              <Card className="bg-gray-900 border-gray-800">
+              <Card className="bg-gray-900 border-gray-800 mx-2 my-4">
                 <CardContent className="p-4">
                   <div className="flex gap-4">
                     <div className="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0">

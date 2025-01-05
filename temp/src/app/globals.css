@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.rubik-vinyl-regular {
+  font-family: "Rubik Vinyl", serif;
+  font-size: 6rem;
+}
  
 @layer base {
   :root {
