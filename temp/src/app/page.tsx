@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { useSession } from 'next-auth/react';
 
-export default function page(){
+export default function Page(){
 
   const { data: session } = useSession();
   console.log(session?.user)

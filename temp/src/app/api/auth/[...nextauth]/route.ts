@@ -4,13 +4,13 @@ import GoogleProvider from "next-auth/providers/google";
 import dbConnect from "@/lib/mongodb";
 import { UserModels } from "@/models/User";
 import { compare } from "bcryptjs";
-import { NextAuthOptions } from "next-auth";
+// import { NextAuthOptions } from "next-auth";
 
 declare module "bcryptjs" {
   export function compare(s: string, hash: string): Promise<boolean>;
 }
 
-export const authOptions: NextAuthOptions = {
+export const authOptions = {
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID!,
