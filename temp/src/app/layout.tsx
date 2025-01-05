@@ -10,8 +10,8 @@ import ThemeProvider from "@/components/theme-provider";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Product Management App",
-  description: "Manage your products with ease",
+  title: "OAFootwears",
+  description: "",
 };
 
 export default async function RootLayout({
@@ -35,7 +35,7 @@ export default async function RootLayout({
               </main>
               <footer className="bg-white dark:bg-gray-800 shadow-lg mt-auto">
                 <div className="container mx-auto px-4 py-6 text-center text-gray-600 dark:text-gray-300">
-                  &copy; {new Date().getFullYear()} Product Management App. All
+                  &copy; {new Date().getFullYear()} OAFootwears. All
                   rights reserved.
                 </div>
               </footer>

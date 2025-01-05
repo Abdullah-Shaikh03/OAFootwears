@@ -103,9 +103,9 @@ export default function ProductDetail({
     return (
       <div className="flex items-center justify-center min-h-[60vh]">
         <div className="animate-pulse space-y-4">
-          <div className="h-12 w-48 bg-gray-200 rounded"></div>
-          <div className="h-48 w-96 bg-gray-200 rounded"></div>
-          <div className="h-8 w-72 bg-gray-200 rounded"></div>
+          <div className="h-12 w-48 rounded"></div>
+          <div className="h-48 w-96 rounded"></div>
+          <div className="h-8 w-72  rounded"></div>
         </div>
       </div>
     );
@@ -190,6 +190,9 @@ export default function ProductDetail({
                 className="aspect-square relative rounded-2xl overflow-hidden bg-gray-100 dark:bg-gray-800"
               >
                 <Image
+                  // width={1000}
+                  fill
+                  // height={1000}
                   src={product.imageUrls[currentImageIndex]}
                   alt={`${product.brandName} - View ${currentImageIndex + 1}`}
                   className="object-cover w-full h-full"
@@ -229,6 +232,9 @@ export default function ProductDetail({
                   )}
                 >
                   <Image
+                    fill
+                    // width={1000}
+                    // height={1000}
                     src={url}
                     alt={`${product.brandName} thumbnail ${index + 1}`}
                     className="object-cover w-full h-full"
@@ -273,13 +279,13 @@ export default function ProductDetail({
                     <p className="font-semibold">Article</p>
                     <p className="text-muted-foreground">{product.article}</p>
                   </div>
-                  <div>
+                  {/* <div>
                     <p className="font-semibold">Material</p>
                     <p className="text-muted-foreground">Premium Quality</p>
-                  </div>
+                  </div> */}
                   <div>
                     <p className="font-semibold">Style</p>
-                    <p className="text-muted-foreground">Casual</p>
+                    <p className="text-muted-foreground">{product.style}</p>
                   </div>
                 </div>
               </TabsContent>

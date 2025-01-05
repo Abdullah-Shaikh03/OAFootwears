@@ -8,9 +8,12 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { TextRevealCard } from '@/components/ui/text-reveal-card';
+import { useToast } from "@/hooks/use-toast"
+
+const {toast} = useToast()
 
 export default function NewProduct() {
-  const [product, setProduct] = useState({ brandName: '', article: '', price: '', imageUrls: [''] });
+  const [product, setProduct] = useState({ brandName: '', article: '', style:'', price: '', imageUrls: [''] });
   const router = useRouter();
   const { data: session } = useSession();
 
@@ -28,7 +31,10 @@ export default function NewProduct() {
     if (res.ok) {
       router.push('/');
     } else {
-      alert('Error adding product');
+      toast({
+        title:'Error adding Product',
+        // description:''
+      })
     }
   };
 
@@ -71,7 +77,7 @@ export default function NewProduct() {
             </div>
             <div>
               <Label htmlFor="style">Style</Label>
-              <Input type="text" id="style" name="style" value={product.article} onChange={handleChange} required />
+              <Input type="text" id="style" name="style" value={product.style} onChange={handleChange} required />
             </div>
             <div>
               <Label htmlFor="price">Price</Label>

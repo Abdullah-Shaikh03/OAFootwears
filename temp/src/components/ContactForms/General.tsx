@@ -4,7 +4,7 @@ const General = () => {
     
   return (
     <div>
-      
+      General contact form
     </div>
   )
 }

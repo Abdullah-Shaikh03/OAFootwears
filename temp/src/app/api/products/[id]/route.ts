@@ -22,10 +22,7 @@ export async function GET(request: NextRequest, { params }: { params: any }) {
   }
 }
 
-export async function PUT(
-  request: NextRequest,
-  { params }: { params: any }
-) {
+export async function PUT(request: NextRequest, { params }: { params: any }) {
   const { id } = params;
   try {
     const session: { user?: { role?: string } } | null = await getServerSession(
