@@ -9,6 +9,7 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ImagePlus, X } from "lucide-react";
 import { Textarea } from "@/components/ui/textarea";
+import Image from "next/image";
 
 export default function NewProduct() {
   const [product, setProduct] = useState({
@@ -189,7 +190,8 @@ export default function NewProduct() {
               <div className="grid grid-cols-5 gap-2">
                 {previews.map((preview, index) => (
                   <div key={index} className="relative aspect-square">
-                    <img
+                    <Image
+                      fill
                       src={preview}
                       alt={`Preview ${index + 1}`}
                       className="w-full h-full object-cover rounded-lg"

@@ -7,7 +7,7 @@ import { uploadToS3, deleteFromS3 } from "@/lib/s3";
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: any}
 ) {
   const { id } = await params;
   try {
@@ -28,7 +28,7 @@ export async function GET(
 
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: any }
 ) {
   const { id } = await params;
   try {
@@ -99,7 +99,7 @@ export async function PUT(
 
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: any}
 ) {
   const { id } = await params;
   try {
