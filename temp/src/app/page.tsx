@@ -36,10 +36,18 @@ export default function Page() {
           <TypeEffect words={words} />
         </div>
         <div className="font-medium text-2xl">
-          "Stepping Up Your Business, One Pair at a Time!"
+          Stepping Up Your Business, One Pair at a Time!
         </div>
         <div className="my-4">
-          <Button variant={'outline'} className="px-3 py-6 rounded-3xl" onClick={()=>{router.push("/products")}}>Explore our Collection</Button>
+          <Button
+            variant={"outline"}
+            className="px-3 py-6 rounded-3xl"
+            onClick={() => {
+              router.push("/products");
+            }}
+          >
+            Explore our Collection
+          </Button>
         </div>
       </div>
     </div>
