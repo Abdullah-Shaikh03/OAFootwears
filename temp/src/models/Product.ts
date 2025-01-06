@@ -21,13 +21,16 @@ const ProductSchema = new mongoose.Schema(
     },
     style: {
       type: [String],
-      required: [true, 'Please enter Style'],
-
+      required: [true, "Please enter Style"],
     },
     user: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
       required: true,
+    },
+    desc: {
+      type: String,
+      require: [true, "Please enter product description"],
     },
   },
   { timestamps: true }
