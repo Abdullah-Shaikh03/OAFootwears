@@ -16,6 +16,7 @@ import { cn } from "@/lib/utils"
 // import { getSignedDownloadUrl } from '@/lib/s3';
 import { useCart } from '@/contexts/CartContext';
 import { toast } from 'react-hot-toast';
+import Image from 'next/image';
 
 export default function ProductDetail({ params }: { params: Promise<{ id: string }> }) {
   const resolvedParams = use(params);
@@ -222,7 +223,8 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
                     currentImageIndex === index && "ring-2 ring-primary"
                   )}
                 >
-                  <img
+                  <Image
+                  fill
                     src={url || '/placeholder.svg?height=80&width=80'}
                     alt={`${product.brandName} thumbnail ${index + 1}`}
                     className="object-cover w-full h-full"

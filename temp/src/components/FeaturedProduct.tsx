@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 interface Product {
   _id: string;
@@ -37,7 +38,8 @@ export function FeaturedProducts() {
           >
             <Card className="overflow-hidden">
               <CardContent className="p-0">
-                <img
+                <Image
+                fill
                   src={product.imageUrls[0] || "/placeholder.svg"}
                   alt={product.brandName}
                   className="w-full h-48 object-cover"

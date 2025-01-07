@@ -60,7 +60,7 @@ export function Testimonials() {
           >
             <Card className="bg-gray-800 text-white">
               <CardContent className="p-6">
-                <p className="text-lg mb-4">"{testimonials[currentIndex].content}"</p>
+                <p className="text-lg mb-4">&quot;{testimonials[currentIndex].content}&quot;</p>
                 <p className="font-semibold">{testimonials[currentIndex].name}</p>
                 <p className="text-sm text-gray-400">{testimonials[currentIndex].role}</p>
               </CardContent>
