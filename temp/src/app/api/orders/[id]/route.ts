@@ -6,7 +6,7 @@ import { authOptions } from "@/lib/authOptions";
 
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: any }
 ) {
   try {
     const session = await getServerSession(authOptions);
@@ -41,7 +41,7 @@ export async function PUT(
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: any }
 ) {
   try {
     const session = await getServerSession(authOptions);
@@ -49,7 +49,7 @@ export async function GET(
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    const { id } = params;
+    const { id } = await params;
     await dbConnect();
 
     const order = await Orders.findById(id);
