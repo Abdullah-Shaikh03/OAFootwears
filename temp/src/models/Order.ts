@@ -20,9 +20,8 @@ const OrderSchema = new mongoose.Schema({
   },
   paymentMethod: { type: String, required: true },
   status: { type: String, required: true, default: 'Pending' },
+  deliveryStatus: { type: String, required: true, default: 'Processing', enum: ['Processing', 'Shipped', 'Delivered'] },
 }, { timestamps: true });
 
-const Order = mongoose.models.Order || mongoose.model('Order', OrderSchema);
-
-export default Order 
+export const Orders = mongoose.models.Order || mongoose.model('Order', OrderSchema);
 

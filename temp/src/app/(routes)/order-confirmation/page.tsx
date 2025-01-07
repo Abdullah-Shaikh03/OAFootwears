@@ -1,20 +1,36 @@
+// src/app/(routes)/order-confirmation/page.tsx
 'use client';
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function OrderConfirmation() {
   const [orderId, setOrderId] = useState<string | null>(null);
+  const [order, setOrder] = useState<any>(null);
   const router = useRouter();
 
   useEffect(() => {
-    const id = localStorage.getItem('lastOrderId');
-    if (id) {
-      setOrderId(id);
-      localStorage.removeItem('lastOrderId');
-    }
+    const fetchOrder = async () => {
+      try {
+        const lastOrderId = localStorage.getItem('lastOrderId');
+        if (lastOrderId) {
+          setOrderId(lastOrderId);
+          const response = await fetch(`/api/orders/${lastOrderId}`);
+          if (response.ok) {
+            const orderData = await response.json();
+            setOrder(orderData);
+          } else {
+            console.error('Failed to fetch order:', response.statusText);
+          }
+        }
+      } catch (error) {
+        console.error('Error fetching order:', error);
+      }
+    };
+
+    fetchOrder();
   }, []);
 
   if (!orderId) {
@@ -33,13 +49,19 @@ export default function OrderConfirmation() {
           <CardTitle className="text-2xl font-bold">Order Confirmation</CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="mb-4">Thank you for your order! Your order has been successfully placed.</p>
-          <p className="mb-4">Order ID: {orderId}</p>
-          <p className="mb-8">We will process your order and send you a confirmation email shortly.</p>
+          {order ? (
+            <>
+              <p className="mb-4">Thank you for your order! Your order has been successfully placed.</p>
+              <p className="mb-4">Order ID: {order._id}</p>
+              {/* Display additional order details as needed */}
+              <p className="mb-8">We will process your order and send you a confirmation email shortly.</p>
+            </>
+          ) : (
+            <p className="mb-4">Loading order details...</p>
+          )}
           <Button onClick={() => router.push('/products')}>Continue Shopping</Button>
         </CardContent>
       </Card>
     </div>
   );
 }
-

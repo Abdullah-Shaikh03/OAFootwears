@@ -17,7 +17,7 @@ export default function NewProduct() {
     article: "",
     style: "",
     price: "",
-    desc:""
+    desc: "",
   });
   const [images, setImages] = useState<File[]>([]);
   const [previews, setPreviews] = useState<string[]>([]);
@@ -60,7 +60,7 @@ export default function NewProduct() {
     formData.append("article", product.article);
     formData.append("style", product.style);
     formData.append("price", product.price);
-    formData.append('desc', product.desc)
+    formData.append("desc", product.desc);
     images.forEach((image) => formData.append("images", image));
 
     try {
@@ -148,7 +148,7 @@ export default function NewProduct() {
               </div>
               <div>
                 <Label htmlFor="desc" className="">
-                    Product Description
+                  Product Description
                 </Label>
                 <Textarea
                   id="style"
@@ -216,6 +216,7 @@ export default function NewProduct() {
           </form>
         </CardContent>
       </Card>
+      
     </div>
   );
 }
