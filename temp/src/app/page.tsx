@@ -78,7 +78,6 @@ export default function Page() {
           </motion.div>
         </AnimatePresence>
 
-        <FeaturedProducts />
 
         <SocialProof />
 
