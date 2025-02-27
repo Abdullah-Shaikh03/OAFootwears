@@ -1,24 +1,34 @@
-'use client';
-
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
-import { useSession } from 'next-auth/react';
-import { use } from 'react';
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Card } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { motion, AnimatePresence } from "framer-motion"
-import { ChevronLeft, ChevronRight, ShoppingCart, Heart, Share2 } from 'lucide-react'
-import { cn } from "@/lib/utils"
+"use client";
+import Link from "next/link";
+import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { useSession } from "next-auth/react";
+import { use } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  ChevronLeft,
+  ChevronRight,
+  ShoppingCart,
+  Heart,
+  Share2,
+} from "lucide-react";
+import { cn } from "@/lib/utils";
 // import { getSignedDownloadUrl } from '@/lib/s3';
-import { useCart } from '@/contexts/CartContext';
-import { toast } from 'react-hot-toast';
-import Image from 'next/image';
+import { useCart } from "@/contexts/CartContext";
+import { toast } from "react-hot-toast";
+import Image from "next/image";
 
-export default function ProductDetail({ params }: { params: Promise<{ id: string }> }) {
+export default function ProductDetail({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
   const resolvedParams = use(params);
   const [product, setProduct] = useState<any>(null);
   const [isEditing, setIsEditing] = useState(false);
@@ -34,13 +44,13 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
     const fetchProduct = async () => {
       try {
         const res = await fetch(`/api/products/${resolvedParams.id}`);
-        if (!res.ok) throw new Error('Failed to fetch product');
+        if (!res.ok) throw new Error("Failed to fetch product");
         const data = await res.json();
         setProduct(data);
         setSignedImageUrls(data.imageUrls);
       } catch (error) {
-        console.error('Error fetching product:', error);
-        toast.error('Failed to load product details');
+        console.error("Error fetching product:", error);
+        toast.error("Failed to load product details");
       }
     };
 
@@ -60,54 +70,56 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const formData = new FormData();
-    formData.append('brandName', product.brandName);
-    formData.append('article', product.article);
-    formData.append('style', product.style)
-    formData.append('desc', product.desc)
-    formData.append('price', product.price.toString());
-    newImages.forEach((image) => formData.append('images', image));
+    formData.append("brandName", product.brandName);
+    formData.append("article", product.article);
+    formData.append("style", product.style);
+    formData.append("desc", product.desc);
+    formData.append("price", product.price.toString());
+    newImages.forEach((image) => formData.append("images", image));
 
     try {
       const res = await fetch(`/api/products/${resolvedParams.id}`, {
-        method: 'PUT',
+        method: "PUT",
         body: formData,
       });
-      if (!res.ok) throw new Error('Failed to update product');
+      if (!res.ok) throw new Error("Failed to update product");
       const updatedProduct = await res.json();
       setProduct(updatedProduct);
       setIsEditing(false);
       setNewImages([]);
-      
+
       setSignedImageUrls(updatedProduct.imageUrls);
-      toast.success('Product updated successfully');
+      toast.success("Product updated successfully");
     } catch (error) {
-      console.error('Error updating product:', error);
-      toast.error('Failed to update product');
+      console.error("Error updating product:", error);
+      toast.error("Failed to update product");
     }
   };
 
   const handleDelete = async () => {
-    if (confirm('Are you sure you want to delete this product?')) {
+    if (confirm("Are you sure you want to delete this product?")) {
       try {
-        const res = await fetch(`/api/products/${resolvedParams.id}`, { method: 'DELETE' });
-        if (!res.ok) throw new Error('Failed to delete product');
-        router.push('/products');
-        toast.success('Product deleted successfully');
+        const res = await fetch(`/api/products/${resolvedParams.id}`, {
+          method: "DELETE",
+        });
+        if (!res.ok) throw new Error("Failed to delete product");
+        router.push("/products");
+        toast.success("Product deleted successfully");
       } catch (error) {
-        console.error('Error deleting product:', error);
-        toast.error('Failed to delete product');
+        console.error("Error deleting product:", error);
+        toast.error("Failed to delete product");
       }
     }
   };
 
   const nextImage = () => {
-    setCurrentImageIndex((prev) => 
-      prev === (signedImageUrls.length - 1) ? 0 : prev + 1
+    setCurrentImageIndex((prev) =>
+      prev === signedImageUrls.length - 1 ? 0 : prev + 1
     );
   };
 
   const previousImage = () => {
-    setCurrentImageIndex((prev) => 
+    setCurrentImageIndex((prev) =>
       prev === 0 ? signedImageUrls.length - 1 : prev - 1
     );
   };
@@ -121,21 +133,22 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
         price: product.price,
         quantity: 1,
       });
-      toast.success('Product added to cart');
+      toast.success("Product added to cart");
     }
   };
 
-  if (!product) return (
-    <div className="flex items-center justify-center min-h-[60vh]">
-      <div className="animate-pulse space-y-4">
-        <div className="h-12 w-48 bg-gray-200 rounded"></div>
-        <div className="h-48 w-96 bg-gray-200 rounded"></div>
-        <div className="h-8 w-72 bg-gray-200 rounded"></div>
+  if (!product)
+    return (
+      <div className="flex items-center justify-center min-h-[60vh]">
+        <div className="animate-pulse space-y-4">
+          <div className="h-12 w-48 bg-gray-200 rounded"></div>
+          <div className="h-48 w-96 bg-gray-200 rounded"></div>
+          <div className="h-8 w-72 bg-gray-200 rounded"></div>
+        </div>
       </div>
-    </div>
-  );
+    );
 
-  const isAdmin = session?.user.role === 'admin';
+  const isAdmin = session?.user.role === "admin";
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -144,23 +157,56 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <Label htmlFor="brandName">Brand Name</Label>
-              <Input type="text" id="brandName" name="brandName" value={product.brandName} onChange={handleChange} required />
+              <Input
+                type="text"
+                id="brandName"
+                name="brandName"
+                value={product.brandName}
+                onChange={handleChange}
+                required
+              />
             </div>
             <div>
               <Label htmlFor="article">Article</Label>
-              <Input type="text" id="article" name="article" value={product.article} onChange={handleChange} required />
+              <Input
+                type="text"
+                id="article"
+                name="article"
+                value={product.article}
+                onChange={handleChange}
+                required
+              />
             </div>
             <div>
               <Label htmlFor="price">Price</Label>
-              <Input type="number" id="price" name="price" value={product.price} onChange={handleChange} required />
+              <Input
+                type="number"
+                id="price"
+                name="price"
+                value={product.price}
+                onChange={handleChange}
+                required
+              />
             </div>
             <div>
               <Label htmlFor="images">New Images</Label>
-              <Input type="file" id="images" onChange={handleImageChange} multiple accept="image/*" />
+              <Input
+                type="file"
+                id="images"
+                onChange={handleImageChange}
+                multiple
+                accept="image/*"
+              />
             </div>
             <div className="flex gap-2">
               <Button type="submit">Save Changes</Button>
-              <Button type="button" onClick={() => setIsEditing(false)} variant="outline">Cancel</Button>
+              <Button
+                type="button"
+                onClick={() => setIsEditing(false)}
+                variant="outline"
+              >
+                Cancel
+              </Button>
             </div>
           </form>
         </Card>
@@ -182,8 +228,12 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
                     Failed to load image
                   </div>
                 ) : (
-                  <img
-                    src={signedImageUrls[currentImageIndex] || '/placeholder.svg?height=300&width=300'}
+                  <Image
+                    fill
+                    src={
+                      signedImageUrls[currentImageIndex] ||
+                      "/placeholder.svg?height=300&width=300"
+                    }
                     alt={`${product.brandName} - View ${currentImageIndex + 1}`}
                     className="object-cover w-full h-full"
                     onError={() => setImageLoadError(true)}
@@ -191,7 +241,7 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
                 )}
               </motion.div>
             </AnimatePresence>
-            
+
             {signedImageUrls.length > 1 && (
               <>
                 <Button
@@ -224,12 +274,13 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
                   )}
                 >
                   <Image
-                  fill
-                    src={url || '/placeholder.svg?height=80&width=80'}
+                    fill
+                    src={url || "/placeholder.svg?height=80&width=80"}
                     alt={`${product.brandName} thumbnail ${index + 1}`}
                     className="object-cover w-full h-full"
                     onError={(e) => {
-                      (e.target as HTMLImageElement).src = '/placeholder.svg?height=80&width=80';
+                      (e.target as HTMLImageElement).src =
+                        "/placeholder.svg?height=80&width=80";
                     }}
                   />
                 </button>
@@ -274,17 +325,28 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
               </TabsContent>
             </Tabs>
 
-            <div className="flex gap-4">
+            {/* <div className="flex gap-4">
               <Button className="flex-1" size="lg" onClick={handleAddToCart}>
                 <ShoppingCart className="mr-2 h-5 w-5" />
                 Add to Cart
               </Button>
+            </div> */}
+            <div className="flex gap-4">
+              <Link href="/contact">
+                <Button className="flex-1" size={"lg"}>
+                  Enquire about the products
+                </Button>
+              </Link>
             </div>
 
             {isAdmin && (
               <div className="flex gap-2 pt-4 border-t">
-                <Button onClick={() => setIsEditing(true)} variant="outline">Edit</Button>
-                <Button onClick={handleDelete} variant="destructive">Delete</Button>
+                <Button onClick={() => setIsEditing(true)} variant="outline">
+                  Edit
+                </Button>
+                <Button onClick={handleDelete} variant="destructive">
+                  Delete
+                </Button>
               </div>
             )}
           </div>
@@ -293,4 +355,3 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
     </div>
   );
 }
-
