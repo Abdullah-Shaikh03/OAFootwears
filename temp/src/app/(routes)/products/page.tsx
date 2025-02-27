@@ -61,7 +61,7 @@ export default function ProductsPage() {
                     </h2>
                     <p className="text-sm ">{product.article}</p>
                     <p className="text-lg font-bold ">
-                      ${product.price.toFixed(2)}
+                    &#8377;{""}{product.price.toFixed(2)}
                     </p>
                   </div>
                 </CardContent>

@@ -6,6 +6,7 @@ import { Session } from "next-auth";
 import { authOptions } from "@/lib/authOptions";
 import SessionProvider from "@/components/SessionProvider";
 import ThemeProvider from "@/components/theme-provider";
+import { CartProvider } from "@/contexts/CartContext";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -19,7 +20,9 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const session = (await getServerSession(authOptions)) as Session & { expires: string };
+  const session = (await getServerSession(authOptions)) as Session & {
+    expires: string;
+  };
 
   return (
     <html lang="en" suppressHydrationWarning suppressContentEditableWarning>
@@ -28,18 +31,20 @@ export default async function RootLayout({
       >
         <ThemeProvider>
           <SessionProvider session={session}>
-            <div className="flex flex-col min-h-screen">
-              <Navbar />
-              <main className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-                {children}
-              </main>
-              <footer className="bg-white dark:bg-gray-800 shadow-lg mt-auto">
-                <div className="container mx-auto px-4 py-6 text-center text-gray-600 dark:text-gray-300">
-                  &copy; {new Date().getFullYear()} OAFootwears. All
-                  rights reserved.
-                </div>
-              </footer>
-            </div>
+            <CartProvider>
+              <div className="flex flex-col min-h-screen">
+                <Navbar />
+                <main className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                  {children}
+                </main>
+                <footer className="bg-white dark:bg-gray-800 shadow-lg mt-auto">
+                  <div className="container mx-auto px-4 py-6 text-center text-gray-600 dark:text-gray-300">
+                    &copy; {new Date().getFullYear()} OAFootwears. All rights
+                    reserved.
+                  </div>
+                </footer>
+              </div>
+            </CartProvider>
           </SessionProvider>
         </ThemeProvider>
       </body>

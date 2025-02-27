@@ -1,6 +1,5 @@
 "use client";
-
-import { Session } from "next-auth";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
@@ -20,6 +19,9 @@ import {
   Share2,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+// import { getSignedDownloadUrl } from '@/lib/s3';
+import { useCart } from "@/contexts/CartContext";
+import { toast } from "react-hot-toast";
 import Image from "next/image";
 
 export default function ProductDetail({
@@ -31,86 +33,122 @@ export default function ProductDetail({
   const [product, setProduct] = useState<any>(null);
   const [isEditing, setIsEditing] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [newImages, setNewImages] = useState<File[]>([]);
+  const [signedImageUrls, setSignedImageUrls] = useState<string[]>([]);
+  const [imageLoadError, setImageLoadError] = useState(false);
   const router = useRouter();
-
-  interface ExtendedSession extends Session {
-    user: {
-      role: string;
-    };
-  }
-
-  const { data: session } = useSession() as { data: ExtendedSession | null };
+  const { data: session } = useSession();
+  const { addToCart } = useCart();
 
   useEffect(() => {
-    fetch(`/api/products/${resolvedParams.id}`)
-      .then((res) => res.json())
-      .then((data) => setProduct(data));
+    const fetchProduct = async () => {
+      try {
+        const res = await fetch(`/api/products/${resolvedParams.id}`);
+        if (!res.ok) throw new Error("Failed to fetch product");
+        const data = await res.json();
+        setProduct(data);
+        setSignedImageUrls(data.imageUrls);
+      } catch (error) {
+        console.error("Error fetching product:", error);
+        toast.error("Failed to load product details");
+      }
+    };
+
+    fetchProduct();
   }, [resolvedParams.id]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setProduct({ ...product, [e.target.name]: e.target.value });
   };
 
-  const handleImageChange = (
-    e: React.ChangeEvent<HTMLInputElement>,
-    index: number
-  ) => {
-    const newImageUrls = [...product.imageUrls];
-    newImageUrls[index] = e.target.value;
-    setProduct({ ...product, imageUrls: newImageUrls });
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files) {
+      setNewImages(Array.from(e.target.files));
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const res = await fetch(`/api/products/${resolvedParams.id}`, {
-      method: "PUT",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(product),
-    });
-    if (res.ok) {
+    const formData = new FormData();
+    formData.append("brandName", product.brandName);
+    formData.append("article", product.article);
+    formData.append("style", product.style);
+    formData.append("desc", product.desc);
+    formData.append("price", product.price.toString());
+    newImages.forEach((image) => formData.append("images", image));
+
+    try {
+      const res = await fetch(`/api/products/${resolvedParams.id}`, {
+        method: "PUT",
+        body: formData,
+      });
+      if (!res.ok) throw new Error("Failed to update product");
+      const updatedProduct = await res.json();
+      setProduct(updatedProduct);
       setIsEditing(false);
-    } else {
-      alert("Error updating product");
+      setNewImages([]);
+
+      setSignedImageUrls(updatedProduct.imageUrls);
+      toast.success("Product updated successfully");
+    } catch (error) {
+      console.error("Error updating product:", error);
+      toast.error("Failed to update product");
     }
   };
 
   const handleDelete = async () => {
     if (confirm("Are you sure you want to delete this product?")) {
-      const res = await fetch(`/api/products/${resolvedParams.id}`, {
-        method: "DELETE",
-      });
-      if (res.ok) {
+      try {
+        const res = await fetch(`/api/products/${resolvedParams.id}`, {
+          method: "DELETE",
+        });
+        if (!res.ok) throw new Error("Failed to delete product");
         router.push("/products");
-      } else {
-        alert("Error deleting product");
+        toast.success("Product deleted successfully");
+      } catch (error) {
+        console.error("Error deleting product:", error);
+        toast.error("Failed to delete product");
       }
     }
   };
 
   const nextImage = () => {
     setCurrentImageIndex((prev) =>
-      prev === product?.imageUrls.length - 1 ? 0 : prev + 1
+      prev === signedImageUrls.length - 1 ? 0 : prev + 1
     );
   };
 
   const previousImage = () => {
     setCurrentImageIndex((prev) =>
-      prev === 0 ? product?.imageUrls.length - 1 : prev - 1
+      prev === 0 ? signedImageUrls.length - 1 : prev - 1
     );
+  };
+
+  const handleAddToCart = () => {
+    if (product) {
+      addToCart({
+        productId: product._id,
+        brandName: product.brandName,
+        article: product.article,
+        price: product.price,
+        quantity: 1,
+      });
+      toast.success("Product added to cart");
+    }
   };
 
   if (!product)
     return (
       <div className="flex items-center justify-center min-h-[60vh]">
         <div className="animate-pulse space-y-4">
-          <div className="h-12 w-48 rounded"></div>
-          <div className="h-48 w-96 rounded"></div>
-          <div className="h-8 w-72  rounded"></div>
+          <div className="h-12 w-48 bg-gray-200 rounded"></div>
+          <div className="h-48 w-96 bg-gray-200 rounded"></div>
+          <div className="h-8 w-72 bg-gray-200 rounded"></div>
         </div>
       </div>
     );
 
-  const isAdmin = session?.user?.role === "admin";
+  const isAdmin = session?.user.role === "admin";
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -150,20 +188,16 @@ export default function ProductDetail({
                 required
               />
             </div>
-            {product.imageUrls.map((url: string, index: number) => (
-              <div key={index}>
-                <Label htmlFor={`imageUrl${index}`}>
-                  Image URL {index + 1}
-                </Label>
-                <Input
-                  type="text"
-                  id={`imageUrl${index}`}
-                  value={url}
-                  onChange={(e) => handleImageChange(e, index)}
-                  required
-                />
-              </div>
-            ))}
+            <div>
+              <Label htmlFor="images">New Images</Label>
+              <Input
+                type="file"
+                id="images"
+                onChange={handleImageChange}
+                multiple
+                accept="image/*"
+              />
+            </div>
             <div className="flex gap-2">
               <Button type="submit">Save Changes</Button>
               <Button
@@ -187,20 +221,28 @@ export default function ProductDetail({
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.2 }}
-                className="aspect-square relative rounded-2xl overflow-hidden bg-gray-100 dark:bg-gray-800"
+                className="aspect-square relative rounded-2xl overflow-hidden"
               >
-                <Image
-                  // width={1000}
-                  fill
-                  // height={1000}
-                  src={product.imageUrls[currentImageIndex]}
-                  alt={`${product.brandName} - View ${currentImageIndex + 1}`}
-                  className="object-cover w-full h-full"
-                />
+                {imageLoadError ? (
+                  <div className="flex items-center justify-center w-full h-full text-red-500">
+                    Failed to load image
+                  </div>
+                ) : (
+                  <Image
+                    fill
+                    src={
+                      signedImageUrls[currentImageIndex] ||
+                      "/placeholder.svg?height=300&width=300"
+                    }
+                    alt={`${product.brandName} - View ${currentImageIndex + 1}`}
+                    className="object-cover w-full h-full"
+                    onError={() => setImageLoadError(true)}
+                  />
+                )}
               </motion.div>
             </AnimatePresence>
 
-            {product.imageUrls.length > 1 && (
+            {signedImageUrls.length > 1 && (
               <>
                 <Button
                   variant="ghost"
@@ -222,7 +264,7 @@ export default function ProductDetail({
             )}
 
             <div className="flex gap-2 mt-4 overflow-x-auto pb-2">
-              {product.imageUrls.map((url: string, index: number) => (
+              {signedImageUrls.map((url: string, index: number) => (
                 <button
                   key={index}
                   onClick={() => setCurrentImageIndex(index)}
@@ -233,11 +275,13 @@ export default function ProductDetail({
                 >
                   <Image
                     fill
-                    // width={1000}
-                    // height={1000}
-                    src={url}
+                    src={url || "/placeholder.svg?height=80&width=80"}
                     alt={`${product.brandName} thumbnail ${index + 1}`}
                     className="object-cover w-full h-full"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src =
+                        "/placeholder.svg?height=80&width=80";
+                    }}
                   />
                 </button>
               ))}
@@ -253,21 +297,15 @@ export default function ProductDetail({
 
             <div className="flex items-baseline gap-2">
               <span className="text-3xl font-bold">&#8377;{product.price}</span>
-              {/* <Badge variant="secondary">Free Shipping</Badge> */}
             </div>
 
             <Tabs defaultValue="description" className="w-full">
               <TabsList>
-                {/* <TabsTrigger value="description">Description</TabsTrigger> */}
+                <TabsTrigger value="description">Description</TabsTrigger>
                 <TabsTrigger value="details">Details</TabsTrigger>
-                {/* <TabsTrigger value="shipping">Shipping</TabsTrigger> */}
               </TabsList>
               <TabsContent value="description" className="space-y-4">
-                <p>
-                  Experience ultimate comfort with these premium shoes from{" "}
-                  {product.brandName}. Perfect for everyday wear, these shoes
-                  combine style with functionality.
-                </p>
+                <p>{product.desc}</p>
               </TabsContent>
               <TabsContent value="details" className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
@@ -279,41 +317,26 @@ export default function ProductDetail({
                     <p className="font-semibold">Article</p>
                     <p className="text-muted-foreground">{product.article}</p>
                   </div>
-                  {/* <div>
-                    <p className="font-semibold">Material</p>
-                    <p className="text-muted-foreground">Premium Quality</p>
-                  </div> */}
                   <div>
                     <p className="font-semibold">Style</p>
                     <p className="text-muted-foreground">{product.style}</p>
                   </div>
                 </div>
               </TabsContent>
-              <TabsContent value="shipping" className="space-y-4">
-                <p>
-                  Free shipping on all orders. Delivery within 3-5 business
-                  days.
-                </p>
-              </TabsContent>
             </Tabs>
 
-            <div className="flex gap-4">
-              <Button
-                onClick={() => router.push("/contact")}
-                className="flex-1"
-                size="lg"
-              >
+            {/* <div className="flex gap-4">
+              <Button className="flex-1" size="lg" onClick={handleAddToCart}>
                 <ShoppingCart className="mr-2 h-5 w-5" />
-                Contact to Order
+                Add to Cart
               </Button>
-              {/* <Button variant="outline" size="lg" className="flex-1">
-                <Heart className="mr-2 h-5 w-5" />
-                Add to Wishlist
-              </Button> */}
-              {/* <Button variant="ghost" size="icon">
-                <Share2 className="h-5 w-5" />
-
-              </Button> */}
+            </div> */}
+            <div className="flex gap-4">
+              <Link href="/contact">
+                <Button className="flex-1" size={"lg"}>
+                  Enquire about the products
+                </Button>
+              </Link>
             </div>
 
             {isAdmin && (
@@ -321,11 +344,9 @@ export default function ProductDetail({
                 <Button onClick={() => setIsEditing(true)} variant="outline">
                   Edit
                 </Button>
-                {
-                  <Button onClick={handleDelete} variant="destructive">
-                    Delete
-                  </Button>
-                }
+                <Button onClick={handleDelete} variant="destructive">
+                  Delete
+                </Button>
               </div>
             )}
           </div>
